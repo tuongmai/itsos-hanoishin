@@ -1,0 +1,65 @@
+{
+  "name": "itsos-hanoishin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "body-parser": "^1.20.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "errorhandler": "^1.5.1",
+    "esm": "^3.2.25",
+    "express": "^4.18.2",
+    "express-hbs": "^2.4.2",
+    "fs": "*",
+    "html-webpack-plugin": "^5.5.3",
+    "http": "*",
+    "http-status-codes": "^2.3.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "os": "^0.1.2",
+    "parse-database-url": "^0.3.0",
+    "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "sequelize": "^6.35.1",
+    "sequelize-cli": "^6.6.2",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.89.0"
+  },
+  "scripts": {
+    "start": "npm run server",
+    "server": "node -r esm app.js",
+    "watch-server": "nodemon -e js --ignore /front-end -r esm app.js",
+    "watch-client": "webpack --watch --mode development --progress",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate-undo": "npx sequelize-cli db:migrate:undo"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
