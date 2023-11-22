@@ -1,12 +1,8 @@
 "use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Account extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       // define association here
       // this.belongsTo(models.TourGuideSkill, {
@@ -14,30 +10,30 @@ module.exports = (sequelize, DataTypes) => {
       // });
     }
   }
+
   Account.init(
     {
-      userId: {
-        type: DataTypes.STRING,
-        defaultValue: null,
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        autoIncrement: true, // Set auto-increment
+        primaryKey: true, // Define it as the primary key
       },
-      firstname: {
-        type: DataTypes.STRING,
-        defaultValue: null,
-      },
-      lastname: {
+      username: {
         type: DataTypes.STRING,
         defaultValue: null,
       },
       email: {
         type: DataTypes.STRING,
-        defaultValue: null,
+        allowNull: false,
+        unique: true,
       },
       password: {
         type: DataTypes.STRING,
         defaultValue: null,
       },
       phone: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING, // Assuming phone is a string
         defaultValue: null,
       },
       address: {
@@ -56,21 +52,28 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         defaultValue: null,
       },
+      created_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      updated_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+      }
     },
     {
       sequelize,
       modelName: "Account",
       tableName: "account",
       underscored: true,
-    },
-    {
       indexes: [
         {
           unique: true,
-          fields: ["user_id", "email"]
-        }
-      ]
+          fields: ["user_id", "email"],
+        },
+      ],
     }
   );
+
   return Account;
 };

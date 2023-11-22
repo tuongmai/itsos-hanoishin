@@ -4,13 +4,10 @@ module.exports = {
       user_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true, // Set auto-increment
         allowNull: false
       },
-      firstname: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      lastname: {
+      username: {
         type: DataTypes.STRING,
         allowNull: false
       },
@@ -24,7 +21,7 @@ module.exports = {
       },
       phone: {
         type: DataTypes.STRING,
-        allowNull: false
+        defaultValue: null
       },
       address: {
         type: DataTypes.STRING,
@@ -42,11 +39,11 @@ module.exports = {
         type: DataTypes.STRING,
         allowNull: false
       },
-      createdAt: {
+      created_at: {
         type: DataTypes.DATE,
         allowNull: false
       },
-      updatedAt: {
+      updated_at: {
         type: DataTypes.DATE,
         allowNull: false
       }

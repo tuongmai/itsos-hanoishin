@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import AuthenticationForm  from './AuthenticationForm';
 const Account = () => {
   return (
-    <>account page</>
+    <AuthenticationForm />
   )
 }
 
