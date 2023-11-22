@@ -1,12 +1,11 @@
 import { Router } from "express";
 import LocationController from "../controllers/location";
 
-export default function tourGuide(app) {
+export default function location(app) {
   const router = Router();
   app.use("/api/location", router);
 
-
-
-  // GET {baseURL}/api/account/:id
-  router.get( "/:id", LocationController.getById);
+  router.get("/", LocationController.locationList);
+  router.get("/:locationId", LocationController.getLocationById);
+  router.post("/", LocationController.createLocation);
 }

@@ -13,31 +13,32 @@ module.exports = (sequelize, DataTypes) => {
 
   Location.init(
     {
-      location_id: {
+      locationId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        primaryKey: true,
         autoIncrement: true, // Set auto-increment
-        primaryKey: true, // Define it as the primary key
+        allowNull: false
       },
       name: {
         type: DataTypes.STRING,
-        defaultValue: null
+        allowNull: false
       },
       address: {
         type: DataTypes.STRING,
-        defaultValue: null
+        allowNull: false
       },
       description: {
         type: DataTypes.STRING,
-        defaultValue: null,
+        allowNull: false
       },
       image: {
         type: DataTypes.STRING,
-        defaultValue: null,
+        allowNull: false
       },
-      average_rating: {
-        type: DataTypes.DOUBLE,
-        defaultValue: null,
+      averageRating: {
+        type: DataTypes.FLOAT,
+        allowNull: false,
+        defaultValue: 0
       }
     },
     {
@@ -45,7 +46,13 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Location",
       tableName: "location",
       underscored: true,
-      timestamps: false
+      timestamps: false,
+      indexes: [
+        {
+          unique: true,
+          fields: ["locationId", "name", "address"],
+        },
+      ],
     }
   );
 

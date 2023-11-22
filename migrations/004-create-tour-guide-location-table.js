@@ -4,6 +4,7 @@ module.exports = {
       tour_guide_location_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true, // Set auto-increment
         allowNull: false
       },
       location_id: {

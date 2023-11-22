@@ -43,7 +43,8 @@
     "watch-server": "nodemon -e js --ignore /front-end -r esm app.js",
     "watch-client": "webpack --watch --mode development --progress",
     "migrate": "npx sequelize-cli db:migrate",
-    "migrate-undo": "npx sequelize-cli db:migrate:undo"
+    "migrate-undo": "npx sequelize-cli db:migrate:undo",
+    "migrate-undo-all": "npx sequelize-cli db:migrate:undo:all"
   },
   "eslintConfig": {
     "extends": [
