@@ -25,6 +25,7 @@ import os from "os";
 import routes, { 
   accountRouters,
   tourGuideRouters,
+  locationRouters
 } from "./back-end/routes";
 require("dotenv").config();
 // Bootstrap Express
@@ -68,6 +69,7 @@ if (devEnv) app.use(errorHandler());
 routes(app);
 accountRouters(app);
 tourGuideRouters(app);
+locationRouters(app);
 
 // Boot the HTTP server
 http.createServer(app).listen(port, () => {

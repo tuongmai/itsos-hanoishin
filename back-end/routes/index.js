@@ -1,5 +1,6 @@
 import accountRouters from "./account";
 import tourGuideRouters from "./tourGuide";
+import locationRouters from "./location"
 
 export default function routes(app) {
   app.get("/account", (req, res) => {
@@ -15,4 +16,4 @@ export default function routes(app) {
   });
 }
 
-export { accountRouters, tourGuideRouters };
+export { accountRouters, tourGuideRouters, locationRouters };
