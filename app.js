@@ -23,7 +23,8 @@ import os from "os";
 
 // Routes live here; this is the C in MVC
 import routes, { 
-  accountRouters
+  accountRouters,
+  tourGuideRouters,
 } from "./back-end/routes";
 require("dotenv").config();
 // Bootstrap Express
@@ -66,6 +67,7 @@ if (devEnv) app.use(errorHandler());
 // Wire up routes
 routes(app);
 accountRouters(app);
+tourGuideRouters(app);
 
 // Boot the HTTP server
 http.createServer(app).listen(port, () => {

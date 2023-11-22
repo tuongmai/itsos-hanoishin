@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) => {
   class Account extends Model {
     static associate(models) {
       // define association here
-      // this.belongsTo(models.TourGuideSkill, {
-      //   foreignKey: "entityId",
-      // });
+      this.hasMany(models.TourGuideSkill, {
+        foreignKey: "tour_guide_id",
+      });
     }
   }
 
