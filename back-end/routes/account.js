@@ -10,4 +10,6 @@ export default function account(app) {
 
   // GET {baseURL}/api/account/:id
   router.get( "/:id", AccountController.login);
+  router.post('/register', AccountController.register);
+  router.post('/login', AccountController.login);
 }
