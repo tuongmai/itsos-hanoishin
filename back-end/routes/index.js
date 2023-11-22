@@ -1,4 +1,5 @@
 import accountRouters from "./account";
+import locationRouters from "./location"
 
 export default function routes(app) {
   app.get("/account", (req, res) => {
@@ -12,6 +13,12 @@ export default function routes(app) {
       title: "Tour Guide",
     });
   });
+
+  app.get("/location", (req, res) => {
+    res.render("location.hbs", {
+      title: "Location",
+    });
+  });
 }
 
-export { accountRouters };
+export { accountRouters, locationRouters };

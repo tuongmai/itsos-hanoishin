@@ -4,6 +4,7 @@ module.exports = {
       matching_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true, // Set auto-increment
         allowNull: false
       },
       jap_user_id: {

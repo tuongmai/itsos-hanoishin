@@ -4,6 +4,7 @@ module.exports = {
       skill_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true, // Set auto-increment
         allowNull: false
       },
       tour_guide_id: {
@@ -25,7 +26,7 @@ module.exports = {
     });
   },
   async down(queryInterface, DataTypes) {
-    await queryInterface.dropTable('tourGuideSkill');
+    await queryInterface.dropTable('tour_guide_skill');
   }
  };
  

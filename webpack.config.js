@@ -8,7 +8,8 @@ const path = require("path");
 module.exports = (env, args) => ({
   entry: {
     account: ["./front-end/page/account/index.js"],
-    tourGuide: ["./front-end/page/tourGuide/index.js"]
+    tourGuide: ["./front-end/page/tourGuide/index.js"],
+    location: ["./front-end/page/location/index.js"]
   },
   output: {
     path: path.join(__dirname, "dist"),

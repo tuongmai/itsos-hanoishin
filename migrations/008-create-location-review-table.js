@@ -4,6 +4,7 @@ module.exports = {
       location_review_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
+        autoIncrement: true, // Set auto-increment
         allowNull: false
       },
       location_id: {
