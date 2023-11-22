@@ -6,6 +6,12 @@ export default function routes(app) {
       title: "Hanoi Shin",
     });
   });
+
+  app.get("/tourGuide", (req, res) => {
+    res.render("tourGuide.hbs", {
+      title: "Tour Guide",
+    });
+  });
 }
 
 export { accountRouters };
