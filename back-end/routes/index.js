@@ -13,6 +13,12 @@ export default function routes(app) {
       title: "Tour Guide",
     });
   });
+
+  app.get("/location", (req, res) => {
+    res.render("location.hbs", {
+      title: "Location",
+    });
+  });
 }
 
 export { accountRouters, tourGuideRouters };
