@@ -24,6 +24,7 @@ import os from "os";
 // Routes live here; this is the C in MVC
 import routes, { 
   accountRouters,
+  tourGuideRouters,
   locationRouters
 } from "./back-end/routes";
 require("dotenv").config();
@@ -67,6 +68,7 @@ if (devEnv) app.use(errorHandler());
 // Wire up routes
 routes(app);
 accountRouters(app);
+tourGuideRouters(app);
 locationRouters(app);
 
 // Boot the HTTP server

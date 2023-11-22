@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import useStyles from "./styles";
 import { Image, Row, Col, Card, Button, Input } from "antd";
-import CommentCustom from "./commentCustom";
+import CommentCustom from "../../component/commentCustom";
 
 const { Search } = Input;
 const TourGuide = () => {

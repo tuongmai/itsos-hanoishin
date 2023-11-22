@@ -4,10 +4,10 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Location extends Model {
     static associate(models) {
-      // define association here
-      // this.belongsTo(models.TourGuideSkill, {
-      //   foreignKey: "entityId",
-      // });
+    //   define association here
+    //   this.belongsTo(models.TourGuideSkill, {
+    //     foreignKey: "tour_guide_id"
+    //   });
     }
   }
 
