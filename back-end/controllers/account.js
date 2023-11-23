@@ -36,6 +36,8 @@ const AccountController = {
         username,
         password,
         role,
+        created_at: new Date(),
+        updated_at: new Date(),
       });
 
       res.status(201).json(newUser);
