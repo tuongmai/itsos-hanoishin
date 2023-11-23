@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './AuthenticationForm.css';
 import axios from 'axios'
+import Swal from 'sweetalert2';
 
 const LoginComponent = ({setIsLoginScreen}) => {
   const [username, setUsername] = useState('');
@@ -17,7 +18,14 @@ const LoginComponent = ({setIsLoginScreen}) => {
         username: username,
         password: password,
       });
-      console.log('Login API Response:', response.data);
+      console.log('Login API Response:', response.data.status);
+      if (response.data.status === "Login successfully!") {
+        Swal.fire({
+          title: "Sign in Successfully!",
+          text: "Sign in Successfully!",
+          icon: "success"
+        });
+      }
     } catch (error) {
       console.error('Error during login API call:', error);
     }
@@ -59,6 +67,7 @@ const LoginComponent = ({setIsLoginScreen}) => {
 };
 
 const RegisterComponent = ({setIsLoginScreen}) => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -86,6 +95,14 @@ const RegisterComponent = ({setIsLoginScreen}) => {
           password: password,
           role: accountType,
         });
+        if(response.statusText === "Created") {
+          Swal.fire({
+            title: "Sign up Successfully!",
+            text: "Sign up Successfully!",
+            icon: "success"
+          });
+          navigate("/account");
+        }
       } catch (error) {
         console.error('Error during login API call:', error);
       }
