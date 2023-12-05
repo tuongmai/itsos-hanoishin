@@ -4,7 +4,9 @@ import { Location } from "../../models";
 const LocationController = {
   locationList: async (req, res) => {
     try {
-      const locationList = await Location.findAll();
+      const locationList = await Location.findAll({
+        order: [["locationId", "ASC"], ["averageRating", "ASC"]]
+      });
 
       res.status(201).json(locationList);
     } catch (error) {

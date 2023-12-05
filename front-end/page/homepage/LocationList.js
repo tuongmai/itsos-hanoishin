@@ -32,8 +32,9 @@ const LocationList = () => {
       return (
         <div className={classes.locationItem} key={`${location.name}-${index}`} onClick={() => {handleClickLocation(location)}}>
           <img src={location.image} alt={location.name} style={{ width: "100%" }}/>
-          <p>{location.name}</p>
-          <p>{location.description}</p>
+          <p style={{ fontWeight: 600 }}>{location.name}</p>
+          <p>アドレス：{location.address}</p>
+          <p>評価：{location.averageRating}</p>
         </div>
       )
     }))
