@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Header from "../../component/Header";
 import FavoriteLocation from "./FavoriteLocation";
@@ -9,7 +9,11 @@ const { Search } = Input;
 
 const Homepage = () => {
   const classes = useStyles();
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+  const [searchText, setSearchText] = useState("");
+
+  const onSearch = (value) => {
+    setSearchText(value);
+  }
 
   return (
     <div>
@@ -19,10 +23,10 @@ const Homepage = () => {
           className={classes.searchBox}
           placeholder="ハノイシーン内を検索"
           allowClear
-          onSearch={onSearch}
+          onSearch={(value) => onSearch(value)}
         />
         <FavoriteLocation/>
-        <LocationList/>
+        <LocationList searchText={searchText}/>
       </div>
     </div>
   )

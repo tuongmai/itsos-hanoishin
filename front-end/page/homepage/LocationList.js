@@ -3,15 +3,16 @@ import axios from "axios";
 import useStyles from "./style.js";
 import { getBaseUrl } from "../../utils/index.js";
 
-const LocationList = () => {
+const LocationList = (props) => {
+  const { searchText } = props;
   const baseUrl = getBaseUrl();
   const classes = useStyles();
   const [locations, setlocations] = useState([]);
   const [locationList, setLocationList] = useState(null);
 
-  const getData = async () => {
+  const getData = async (searchText) => {
     try {
-      const res = await axios.get(`${baseUrl}/api/location`);
+      const res = await axios.get(`${baseUrl}/api/location?searchText=${searchText}`);
       setlocations(res.data);
     } catch (err) {
       console.log(err)
@@ -23,21 +24,22 @@ const LocationList = () => {
   };
 
   useEffect(() => {
-    getData();
-  }, []);
+    getData(searchText);
+  }, [searchText]);
 
   useEffect(() => {
     if (locations.length !== 0)
-    setLocationList(locations.map((location, index) => {
-      return (
-        <div className={classes.locationItem} key={`${location.name}-${index}`} onClick={() => {handleClickLocation(location)}}>
-          <img src={location.image} alt={location.name} style={{ width: "100%" }}/>
-          <p style={{ fontWeight: 600 }}>{location.name}</p>
-          <p>アドレス：{location.address}</p>
-          <p>評価：{location.averageRating}</p>
-        </div>
-      )
-    }))
+      setLocationList(locations.map((location, index) => {
+        return (
+          <div className={classes.locationItem} key={`${location.name}-${index}`} onClick={() => {handleClickLocation(location)}}>
+            <img src={location.image} alt={location.name} style={{ width: "100%" }}/>
+            <p style={{ fontWeight: 600 }}>{location.name}</p>
+            <p>アドレス：{location.address}</p>
+            <p>評価：{location.averageRating}</p>
+          </div>
+        )
+      }))
+    else setLocationList(null);
   }, [locations]);
 
   return (
