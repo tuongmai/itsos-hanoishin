@@ -5,9 +5,12 @@ module.exports = (sequelize, DataTypes) => {
   class Location extends Model {
     static associate(models) {
     //   define association here
-    //   this.belongsTo(models.TourGuideSkill, {
-    //     foreignKey: "tour_guide_id"
-    //   });
+      this.hasMany(models.MatchingLocation, {
+        foreignKey: "location_id",
+      });
+      this.belongsToMany(models.Matching, {
+        through: models.MatchingLocation
+      });
     }
   }
 
