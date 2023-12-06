@@ -9,7 +9,7 @@ export default function location(app) {
   router.get("/", MatchingController.matchingList);
 
   //real routes
-  // router.get("/:japaneseId", MatchingController.getMatchingByJpId);
-  // router.get("/:tourGuideId", MatchingController.getMatchingByTgId);
+  router.get("/jp/:id", MatchingController.getMatchingByJpId);
+  router.get("/tg/:id", MatchingController.getMatchingByTgId);
   // router.post("/", MatchingController.createMatching);
 }

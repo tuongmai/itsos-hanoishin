@@ -7,7 +7,12 @@ const MatchingController = {
     try {
       // const searchText = req.query.searchText || "";
       const matchingList = await Matching.findAll({
-        include: Location
+        include: [
+            {
+              model: Location,
+              required: true,
+            },
+          ]
       });
 
       res.status(201).json(matchingList);
@@ -18,21 +23,45 @@ const MatchingController = {
         .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
     }
   },
-  getLocationById: async (req, res) => {
+  getMatchingByJpId: async (req, res) => {
     try {
-      const { locationId } = req.params;
-      const location = await Location.findOne({
+      const userId = req.param("id");
+      const matchingList = await Matching.findAll({
+        include: [
+            {
+              model: Location,
+              required: true,
+            },
+          ],
         where: {
-          locationId
+          jap_user_id: userId,
         }
       });
 
-      if (!location)
-        return res
-          .status(StatusCodes.INTERNAL_SERVER_ERROR)
-          .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
+      res.status(201).json(matchingList);
+    } catch (error) {
+      console.error(error);
+      return res
+        .status(StatusCodes.INTERNAL_SERVER_ERROR)
+        .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
+    }
+  },
+  getMatchingByTgId: async (req, res) => {
+    try {
+      const userId = req.param("id");
+      const matchingList = await Matching.findAll({
+        include: [
+            {
+              model: Location,
+              required: true,
+            },
+          ],
+        where: {
+          tour_guide_id: userId,
+        }
+      });
 
-      res.status(201).json(location);
+      res.status(201).json(matchingList);
     } catch (error) {
       console.error(error);
       return res
