@@ -9,7 +9,9 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "location_id",
       });
       this.belongsToMany(models.Matching, {
-        through: models.MatchingLocation
+        through: models.MatchingLocation,
+        unique: false,
+        foreignKey: "location_id"
       });
     }
   }

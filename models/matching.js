@@ -15,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "tour_guide_id"
       });
       this.belongsToMany(models.Location, {
-        through: models.MatchingLocation
+        through: models.MatchingLocation,
+        unique: false,
+        foreignKey: "matching_id"
       });
     }
   }
