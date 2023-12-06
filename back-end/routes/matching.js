@@ -11,5 +11,5 @@ export default function location(app) {
   //real routes
   router.get("/jp/:id", MatchingController.getMatchingByJpId);
   router.get("/tg/:id", MatchingController.getMatchingByTgId);
-  // router.post("/", MatchingController.createMatching);
+  router.post("/", MatchingController.createMatching);
 }

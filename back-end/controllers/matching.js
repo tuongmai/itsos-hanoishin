@@ -1,5 +1,5 @@
 import { ReasonPhrases, StatusCodes } from "http-status-codes";
-import { Location, Matching } from "../../models";
+import { Location, Matching, MatchingLocation } from "../../models";
 import { Op } from "sequelize";
 
 const MatchingController = {
@@ -69,23 +69,41 @@ const MatchingController = {
         .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
     }
   },
-  createLocation: async (req, res) => {
+  createMatching: async (req, res) => {
     try {
-      const { name, address, description, image, averageRating } = req.body;
-      const existLocation = await Location.findOne({
+      const { jap_user_id, tour_guide_id, location_id, matching_date } = req.body;
+      const existMatching = await Matching.findOne({
         where: {
-          name, address, description, image, averageRating
+          jap_user_id, tour_guide_id, matching_date
         }
       });
 
-      if (existLocation)
-        return res.status(StatusCodes.BAD_REQUEST).json({ error: 'Location already registered' });
+      if (existMatching)
+        return res.status(StatusCodes.BAD_REQUEST).json({ error: 'Can\'t match same person on same day' });
 
-      const location = await Location.create({
-        name, address, description, image, averageRating
+      const matching = await Matching.create({
+        jap_user_id, tour_guide_id, matching_date,
+        status: "BOOKED"
       })
 
-      res.status(201).json(location);
+      const matchingLocation = await MatchingLocation.create({
+        location_id,
+        matching_id: matching.matching_id
+      })
+
+      const matchResult = await Matching.findOne({
+        include: [
+            {
+              model: Location,
+              required: true,
+            },
+          ],
+        where: {
+          matching_id: matching.matching_id
+        }
+      });
+
+      res.status(201).json(matchResult);
     } catch (error) {
       console.error(error);
       return res
