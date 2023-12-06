@@ -22,7 +22,7 @@ const Header = () => {
         <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
           <div className="site-header__start">
             <a href={`${baseUrl}/home`} className="brand" style={{textDecoration: "none"}}>
-              Brand
+              ハノイシーン
             </a>
           </div>
           <div className="site-header__middle">

@@ -13,8 +13,10 @@ const useStyles = createUseStyles({
   favoriteLocationItem: {
     display: "flex",
     flexDirection:"column",
+    justifyContent: "space-between",
     alignItems: "center",
     width: "20%",
+    cursor: "pointer"
   },
   locationList: {
     display: "flex",
