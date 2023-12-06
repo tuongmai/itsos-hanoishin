@@ -9,7 +9,8 @@ module.exports = (env, args) => ({
   entry: {
     account: ["./front-end/page/account/index.js"],
     tourGuide: ["./front-end/page/tourGuide/index.js"],
-    location: ["./front-end/page/location/index.js"]
+    location: ["./front-end/page/location/index.js"],
+    homepage: ["./front-end/page/homepage/index.js"]
   },
   output: {
     path: path.join(__dirname, "dist"),

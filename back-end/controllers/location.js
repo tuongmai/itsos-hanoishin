@@ -1,10 +1,17 @@
 import { ReasonPhrases, StatusCodes } from "http-status-codes";
 import { Location } from "../../models";
+import { Op } from "sequelize";
 
 const LocationController = {
   locationList: async (req, res) => {
     try {
-      const locationList = await Location.findAll();
+      const searchText = req.query.searchText || "";
+      const locationList = await Location.findAll({
+        where: {
+          name: { [Op.iLike]: `%${searchText}%` }
+        },
+        order: [["locationId", "ASC"], ["averageRating", "ASC"]]
+      });
 
       res.status(201).json(locationList);
     } catch (error) {

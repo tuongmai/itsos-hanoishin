@@ -67,7 +67,6 @@ const LoginComponent = ({setIsLoginScreen}) => {
 };
 
 const RegisterComponent = ({setIsLoginScreen}) => {
-  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -101,7 +100,6 @@ const RegisterComponent = ({setIsLoginScreen}) => {
             text: "Sign up Successfully!",
             icon: "success"
           });
-          navigate("/account");
         }
       } catch (error) {
         console.error('Error during login API call:', error);

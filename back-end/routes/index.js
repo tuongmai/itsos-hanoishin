@@ -15,9 +15,15 @@ export default function routes(app) {
     });
   });
 
-  app.get("/location", (req, res) => {
+  app.get("/location/:locationId", (req, res) => {
     res.render("location.hbs", {
       title: "Location",
+    });
+  });
+
+  app.get("/home", (req, res) => {
+    res.render("homepage.hbs", {
+      title: "Home",
     });
   });
 }
