@@ -1,5 +1,6 @@
 import accountRouters from "./account";
 import tourGuideRouters from "./tourGuide";
+import profileRouter from "./profile";
 import matchingRouters from "./matching";
 import locationRouters from "./location";
 
@@ -21,7 +22,12 @@ export default function routes(app) {
       title: "Location",
     });
   });
-
+  app.get("/profile", (req, res) => {
+    res.render("profile.hbs", {
+      title: "Profile Detail",
+    });
+  });
+}
   app.get("/home", (req, res) => {
     res.render("homepage.hbs", {
       title: "Home",

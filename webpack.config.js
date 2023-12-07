@@ -10,6 +10,7 @@ module.exports = (env, args) => ({
     account: ["./front-end/page/account/index.js"],
     tourGuide: ["./front-end/page/tourGuide/index.js"],
     location: ["./front-end/page/location/index.js"],
+    profile: ["./front-end/page/profile/index.js"],
     homepage: ["./front-end/page/homepage/index.js"]
   },
   output: {
