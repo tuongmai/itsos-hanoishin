@@ -8,6 +8,12 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.TourGuideSkill, {
         foreignKey: "tour_guide_id",
       });
+      this.hasMany(models.Matching, {
+        foreignKey: "jap_user_id",
+      });
+      this.hasMany(models.Matching, {
+        foreignKey: "tour_guide_id",
+      });
     }
   }
 

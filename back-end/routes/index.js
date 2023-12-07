@@ -1,7 +1,8 @@
 import accountRouters from "./account";
 import tourGuideRouters from "./tourGuide";
-import locationRouters from "./location"
 import profileRouter from "./profile";
+import matchingRouters from "./matching";
+import locationRouters from "./location";
 
 export default function routes(app) {
   app.get("/account", (req, res) => {
@@ -16,17 +17,22 @@ export default function routes(app) {
     });
   });
 
-  app.get("/location", (req, res) => {
+  app.get("/location/:locationId", (req, res) => {
     res.render("location.hbs", {
       title: "Location",
     });
   });
-
   app.get("/profile", (req, res) => {
     res.render("profile.hbs", {
       title: "Profile Detail",
     });
   });
 }
+  app.get("/home", (req, res) => {
+    res.render("homepage.hbs", {
+      title: "Home",
+    });
+  });
+}
 
-export { accountRouters, tourGuideRouters, locationRouters, profileRouter };
+export { accountRouters, tourGuideRouters, locationRouters, matchingRouters };
