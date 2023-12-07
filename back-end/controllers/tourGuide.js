@@ -76,6 +76,29 @@ const TourGuideController = {
       res.status(500).send('Internal Server Error');
     }
   },
+  searchByName: async (req, res) => {
+    try {
+      const name = req.param("name");
+      const tourGuide = await Account.findAll({
+        include: [
+            {
+              model: TourGuideSkill,
+              required: false,
+            },
+          ],
+        where: {
+          username: {
+            [Op.like]: '%' + name + '%'
+          },
+          role: "TOURGUIDE"
+        },
+      });
+      res.status(201).json(tourGuide);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
+  },
 };
 
 export default TourGuideController;
