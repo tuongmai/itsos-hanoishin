@@ -27,12 +27,17 @@ export default function routes(app) {
       title: "Profile Detail",
     });
   });
-}
   app.get("/home", (req, res) => {
     res.render("homepage.hbs", {
       title: "Home",
     });
   });
+  app.get("/booking", (req, res) => {
+    res.render("bookingTourGuide.hbs", {
+      title: "Booking Tour Guide"
+    })
+  })
 }
+
 
 export { accountRouters, tourGuideRouters, locationRouters, matchingRouters };
