@@ -8,7 +8,7 @@ const Header = () => {
   const items = [
     {
       key: "1",
-      label: <a>プロファイル</a>,
+      label: <a href={`${baseUrl}/profile`}>プロファイル</a>,
     },
     {
       key: "2",
@@ -35,7 +35,7 @@ const Header = () => {
                   <a href="#" style={{textDecoration: "none"}}>ツアーガイド</a>
                 </li>
                 <li className="nav__item">
-                  <a href="#" style={{textDecoration: "none"}}>予約</a>
+                  <a href={`${baseUrl}/booking`} style={{textDecoration: "none"}}>予約</a>
                 </li>
               </ul>
             </nav>

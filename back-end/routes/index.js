@@ -7,37 +7,37 @@ import locationRouters from "./location";
 export default function routes(app) {
   app.get("/account", (req, res) => {
     res.render("account.hbs", {
-      title: "Hanoi Shin",
+      title: "ハノイシーン",
     });
   });
 
   app.get("/tourGuide", (req, res) => {
     res.render("tourGuide.hbs", {
-      title: "Tour Guide",
+      title: "ツアーガイド",
     });
   });
 
   app.get("/location/:locationId", (req, res) => {
     res.render("location.hbs", {
-      title: "Location",
+      title: "場所",
     });
   });
   app.get("/profile", (req, res) => {
     res.render("profile.hbs", {
-      title: "Profile Detail",
+      title: "プロファイル",
     });
   });
   app.get("/home", (req, res) => {
     res.render("homepage.hbs", {
-      title: "Home",
+      title: "ハノイシーン",
     });
   });
   app.get("/booking", (req, res) => {
     res.render("bookingTourGuide.hbs", {
-      title: "Booking Tour Guide"
+      title: "予約"
     })
   })
 }
 
 
-export { accountRouters, tourGuideRouters, locationRouters, matchingRouters };
+export { accountRouters, tourGuideRouters, locationRouters, matchingRouters, profileRouter };

@@ -70,10 +70,10 @@ const BookingTourGuide = () => {
           >
             時間
           </div>
-          <DatePicker style={{ width: "30%" }} />
+          <DatePicker placeholder="予約時間" style={{ width: "30%" }} />
           <div style={{ display: "flex", marginTop: "20px" }}>
             <div style={{ width: "45%" }}>
-              <Input />
+              <Input placeholder="ツアーガイドへ送るメッセージ"/>
             </div>
             <div style={{ width: "45%", marginLeft: "10%" }}>
               <Button
