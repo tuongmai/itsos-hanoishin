@@ -26,6 +26,14 @@ Mỗi khi thực hiện thay đổi trong database, tạo 1 file migration mới
 
 Khi xảy ra lỗi và muốn undo, sử dụng command `npm run migrate-undo` để hoàn tác
 
+3. Chạy seeding cho database
+
+Chạy command `npm run seed`
+
+Mỗi khi thực hiện thêm seed trong database, tạo 1 file seeder mới trong thư mục `/seeders`, sau đó sử dụng command `npm run seed` để chạy file seeder đó
+
+Khi xảy ra lỗi và muốn undo, sử dụng command `npm run seed-undo` để hoàn tác
+
 4. Khởi chạy front-end
 
 Chạy command `npm run watch-client`, mỗi khi thay đổi bất kì file nào trong `/front-end`, mọi thay đổi sẽ đuọc cập nhật tự động
@@ -59,3 +67,9 @@ Tạo các components mới trong folder `/front-end/page`
 Khi tạo một màn mới, cần tạo thêm 1 file `.hbs` (tương tự html) trong `views` và thêm entry trong file `webpack.config.js`
 
 Ảnh, font chữ, ... được đặt trong `/public`
+
+### Seeding dữ liệu
+
+Chạy `npm run seed` để thực hiện seed
+
+Cần migrate lại trước khi seed lại, vì `npm run seed-undo-all` không thay đổi auto-increment, làm dữ liệu trong file seed sẽ bị lỗi.
