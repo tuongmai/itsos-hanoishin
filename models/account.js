@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Account",
       tableName: "account",
       underscored: true,
-      timestamps: true,
+      timestamps: false,
       indexes: [
         {
           unique: true,

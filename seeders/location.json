@@ -2,60 +2,70 @@
   {
     "name": "Hồ Hoàn Kiếm (ホアンキエム湖)",
     "address": "Dinh Tien Hoang, Hoan Kiem",
+    "image": "https://static.vinwonders.com/production/ho-hoan-kiem-2.jpg",
     "description": "ハノイの中心部にある歴史的な寺院がある風光明媚な湖。",
     "average_rating": 4.5
   },
   {
     "name": "Văn Miếu (文廟)",
     "address": "Quoc Tu Giam, Dong Da",
+    "image": "https://thuexemaynguyentu.com/wp-content/uploads/2022/12/Van-Mieu.jpg",
     "description": "ベトナム初の大学で、保存状態の良い建築物で知られています。",
     "average_rating": 4.3
   },
   {
     "name": "Phố cổ Hà Nội (ハノイオールドクォーター)",
     "address": "Hoan Kiem",
+    "image": "https://tl.cdnchinhphu.vn/Uploads/images/pho%20co(2).jpg",
     "description": "狭い道、伝統的な家屋、活気ある市場が広がる魅力的なエリア。",
     "average_rating": 4.0
   },
   {
     "name": "Nhà tù Hỏa Lò (ホアロー刑務所)",
     "address": "1 Hoa Lo, Hoan Kiem",
+    "image": "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/9/18/1243246/IMG_4709.MOV.00_00_0.jpg?w=800&h=496&crop=auto&scale=both",
     "description": "フランス植民地時代とベトナム戦争時に使用された歴史的な刑務所。",
     "average_rating": 4.2
   },
   {
     "name": "Bảo tàng Dân tộc học Việt Nam (ベトナム民族博物館)",
     "address": "Nguyen Van Huyen, Cau Giay",
+    "image": "https://ik.imagekit.io/tvlk/blog/2023/08/bao-tang-dan-toc-hoc-3.jpeg?tr=dpr-2,w-675",
     "description": "ベトナムの民族グループとその文化遺産の多様性を紹介。",
     "average_rating": 4.4
   },
   {
     "name": "Chùa Một Cột (一柱寺)",
     "address": "Chua Mot Cot, Ba Dinh",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/One_Pillar_Pagoda_Hanoi.jpg",
     "description": "蓮の池に建てられたユニークな仏教寺院。",
     "average_rating": 4.6
   },
   {
     "name": "Nhà hát Múa rối Nước Thăng Long (トゥアンロン・ウォーターパペットシアター)",
     "address": "57B Dinh Tien Hoang, Hoan Kiem",
+    "image": "https://media-cdn-v2.laodong.vn/Storage/newsportal/2019/1/18/652967/Hn-Waterpupet.jpg",
     "description": "ベトナムの民話を描いた伝統的な水上人形劇の公演。",
     "average_rating": 4.1
   },
   {
     "name": "Đền Quán Thánh (クアンタイン寺)",
     "address": "Quan Thanh, Ba Dinh",
+    "image": "https://ik.imagekit.io/tvlk/blog/2022/09/den-quan-thanh-1.jpg?tr=dpr-2,w-675",
     "description": "威圧的な黒銅像と静かな庭園で知られる道教寺院。",
     "average_rating": 4.3
   },
   {
     "name": "Bảo tàng Phụ nữ Việt Nam (ベトナム女性博物館)",
     "address": "36 Ly Thuong Kiet, Hoan Kiem",
+    "image": "https://statics.vinpearl.com/bao-tang-phu-nu-viet-nam-thump_1675521474.jpeg",
     "description": "時代を超えたベトナムの女性の歴史と貢献に捧げられています。",
     "average_rating": 4.5
   },
   {
     "name": "Cầu Long Biên (ロンビエン橋)",
     "address": "Long Bien, Hoan Kiem",
+    "image": "https://statics.vinpearl.com/cau-long-bien-6_1678872759.jpg",
     "description": "赤い川のパノラマの眺めを楽しむことができる歴史的な斜張橋。",
     "average_rating": 4.2
   }

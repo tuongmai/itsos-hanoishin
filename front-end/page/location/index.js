@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import useStyles from "./styles";
 import { Row, Col, Card, Button, Input } from "antd";
 import CommentCustom from "../../component/commentCustom";
@@ -109,4 +109,6 @@ const Location = () => {
   );
 };
 
-ReactDOM.render(<Location />, document.getElementById("location"));
+const container = document.getElementById("location");
+const root = createRoot(container);
+root.render(<Location />);

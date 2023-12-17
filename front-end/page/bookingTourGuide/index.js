@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import useStyles from "./styles";
 import { Image, Row, Col, Card, Button, Input, DatePicker } from "antd";
 import Header from "../../component/Header";
@@ -91,7 +91,6 @@ const BookingTourGuide = () => {
   );
 };
 
-ReactDOM.render(
-  <BookingTourGuide />,
-  document.getElementById("booking-tour-guide")
-);
+const container = document.getElementById("booking-tour-guide");
+const root = createRoot(container);
+root.render(<BookingTourGuide />);

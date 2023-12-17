@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import UserProfile  from './UserProfile';
 const Profile = () => {
   return (
@@ -7,4 +7,6 @@ const Profile = () => {
   )
 }
 
-ReactDOM.render(<Profile />, document.getElementById("profile"));
+const container = document.getElementById("homepage");
+const root = createRoot(container);
+root.render(<Profile />);

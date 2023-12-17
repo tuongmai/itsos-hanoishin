@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import useStyles from "./style.js";
 import { getBaseUrl } from "../../utils/index.js";
 
 const FavoriteLocation = () => {
   const baseUrl = getBaseUrl();
   const classes = useStyles();
-  const favoriteLocationList = [
-    { locationId: 4, name: "ホアンキエム湖", image: "https://static.vinwonders.com/production/ho-hoan-kiem-2.jpg" },
-    { locationId: 3, name: "HUST1", image: "https://dlcorp.com.vn/wp-content/uploads/2021/09/Ba%CC%81ch-Khoa-600x301.png" },
-    { locationId: 6, name: "sample place 3", image: "https://static.vinwonders.com/production/ho-hoan-kiem-2.jpg" },
-    { locationId: 7, name: "sample place 4", image: "https://static.vinwonders.com/production/ho-hoan-kiem-2.jpg" },
-  ];
+  const [favoriteLocationList, setFavoriteLocationList] = useState([]);
   const [locationList, setLocationList] = useState(null);
+
+  const getData = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}/api/location`);
+      const locations = res.data;
+      locations.sort((a, b) => { return b.averageRating - a.averageRating });
+      const tmp = locations.slice(0, 4)
+      setFavoriteLocationList(tmp);
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   const handleClickLocation = (location) => {
     window.location.href = `${baseUrl}/location/${location.locationId}`
   };
+
+  useEffect(() => {
+    getData();
+  }, [])
 
   useEffect(() => {
     setLocationList(favoriteLocationList.map((location, index) => {
@@ -26,7 +38,7 @@ const FavoriteLocation = () => {
         </div>
       )
     }))
-  }, []);
+  }, [favoriteLocationList]);
 
   return (
     <div>

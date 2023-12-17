@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import AuthenticationForm  from './AuthenticationForm';
 const Account = () => {
   return (
@@ -7,4 +7,6 @@ const Account = () => {
   )
 }
 
-ReactDOM.render(<Account />, document.getElementById("register-login-page"));
+const container = document.getElementById("register-login-page");
+const root = createRoot(container);
+root.render(<Account />);

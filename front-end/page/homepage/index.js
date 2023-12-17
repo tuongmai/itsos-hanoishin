@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import Header from "../../component/Header";
 import FavoriteLocation from "./FavoriteLocation";
 import LocationList from "./LocationList";
@@ -32,4 +32,6 @@ const Homepage = () => {
   )
 }
 
-ReactDOM.render(<Homepage />, document.getElementById("homepage"));
+const container = document.getElementById("homepage");
+const root = createRoot(container);
+root.render(<Homepage />);

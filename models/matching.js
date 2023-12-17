@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Matching",
       tableName: "matching_tour",
       underscored: true,
-      timestamps: true,
+      timestamps: false,
     }
   );
 
