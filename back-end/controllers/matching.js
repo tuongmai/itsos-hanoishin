@@ -1,6 +1,5 @@
 import { ReasonPhrases, StatusCodes } from "http-status-codes";
 import { Location, Matching, MatchingLocation } from "../../models";
-import { Op } from "sequelize";
 
 const MatchingController = {
   matchingList: async (req, res) => {
