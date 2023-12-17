@@ -21,12 +21,20 @@ module.exports = {
       },
       image: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       },
       average_rating: {
         type: DataTypes.FLOAT,
         allowNull: false,
         defaultValue: 0
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false
       }
     });
   },

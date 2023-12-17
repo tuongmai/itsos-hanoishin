@@ -55,16 +55,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: null,
       },
       role: {
-        type: DataTypes.STRING,
-        defaultValue: null,
-      },
-      created_at: {
-        type: DataTypes.DATE,
-        allowNull: false
-      },
-      updated_at: {
-        type: DataTypes.DATE,
-        allowNull: false
+        type: DataTypes.ENUM('日本人', 'ツアーガイド', '管理者'),
       }
     },
     {

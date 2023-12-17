@@ -30,6 +30,14 @@ module.exports = {
       rating: {
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false
       }
     });
   },

@@ -36,14 +36,13 @@ module.exports = {
         defaultValue: null
       },
       role: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.ENUM('日本人', 'ツアーガイド', '管理者')
       },
-      created_at: {
+      createdAt: {
         type: DataTypes.DATE,
         allowNull: false
       },
-      updated_at: {
+      updatedAt: {
         type: DataTypes.DATE,
         allowNull: false
       }
