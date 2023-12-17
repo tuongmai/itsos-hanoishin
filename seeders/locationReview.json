@@ -1,0 +1,151 @@
+[{
+  "location_id": 1,
+  "jap_user_id": 5,
+  "content": "観光名所の一つ。歴史的で興味深いエリア。素晴らしい写真のチャンス！",
+  "rating": 5
+}, {
+  "location_id": 2,
+  "jap_user_id": 17,
+  "content": "何度か来たことがありますが、いつも同じような感じです。まあまあ楽しいけど、新しい発見はありませんでした。",
+  "rating": 3
+}, {
+  "location_id": 3,
+  "jap_user_id": 70,
+  "content": "個人的には好きな場所。ただし、少し混雑していることがあります。自然美と建築は感動的でした。",
+  "rating": 4
+}, {
+  "location_id": 4,
+  "jap_user_id": 11,
+  "content": "観光名所ですが、少し混雑していました。歴史は興味深いけど、もう少し穴場が欲しかったです。",
+  "rating": 3
+}, {
+  "location_id": 5,
+  "jap_user_id": 79,
+  "content": "ここでの時間はまあまあ楽しかったです。地元の人たちも親切で、良い雰囲気でした。",
+  "rating": 4
+}, {
+  "location_id": 6,
+  "jap_user_id": 6,
+  "content": "個人的には好きな場所。ただし、少し混雑していることがあります。自然美と建築は感動的でした。",
+  "rating": 4
+}, {
+  "location_id": 7,
+  "jap_user_id": 79,
+  "content": "まあまあの観光地。ショッピングや食事は普通ですが、楽しめました。",
+  "rating": 3
+}, {
+  "location_id": 8,
+  "jap_user_id": 87,
+  "content": "素敵な観光スポット。良い買い物と美味しい食事が楽しめました。",
+  "rating": 5
+}, {
+  "location_id": 9,
+  "jap_user_id": 62,
+  "content": "まあまあの観光地。ショッピングや食事は普通ですが、楽しめました。",
+  "rating": 4
+}, {
+  "location_id": 10,
+  "jap_user_id": 31,
+  "content": "観光名所の一つ。歴史的で興味深いエリア。素晴らしい写真のチャンス！",
+  "rating": 3
+}, {
+  "location_id": 1,
+  "jap_user_id": 39,
+  "content": "素晴らしい観光地。ショッピングや美味しい食事も楽しめました。",
+  "rating": 4
+}, {
+  "location_id": 2,
+  "jap_user_id": 57,
+  "content": "ここでの時間はまあまあ楽しかったです。地元の人たちも親切で、良い雰囲気でした。",
+  "rating": 3
+}, {
+  "location_id": 3,
+  "jap_user_id": 63,
+  "content": "何度も訪れたくなるような場所。雰囲気が最高で、素晴らしい体験でした。",
+  "rating": 5
+}, {
+  "location_id": 4,
+  "jap_user_id": 53,
+  "content": "観光名所ですが、少し混雑していました。歴史は興味深いけど、もう少し穴場が欲しかったです。",
+  "rating": 5
+}, {
+  "location_id": 5,
+  "jap_user_id": 28,
+  "content": "何度か来たことがありますが、いつも同じような感じです。まあまあ楽しいけど、新しい発見はありませんでした。",
+  "rating": 3
+}, {
+  "location_id": 6,
+  "jap_user_id": 52,
+  "content": "ここは普通でした。食事はまずまず、雰囲気もまあまあ。期待はずれではなかったけど、驚きはありませんでした。",
+  "rating": 4
+}, {
+  "location_id": 7,
+  "jap_user_id": 98,
+  "content": "素敵な観光スポット。良い買い物と美味しい食事が楽しめました。",
+  "rating": 5
+}, {
+  "location_id": 8,
+  "jap_user_id": 24,
+  "content": "ローカルの文化に触れる良い機会。友好的な雰囲気で、親しみやすい場所です。",
+  "rating": 4
+}, {
+  "location_id": 9,
+  "jap_user_id": 83,
+  "content": "何度か来たことがありますが、いつも同じような感じです。まあまあ楽しいけど、新しい発見はありませんでした。",
+  "rating": 4
+}, {
+  "location_id": 10,
+  "jap_user_id": 32,
+  "content": "ハノイの場所、まあまあでした。景色は悪くないけど、他の場所も考えてみる価値があります。",
+  "rating": 4
+}, {
+  "location_id": 1,
+  "jap_user_id": 42,
+  "content": "ここは普通でした。食事はまずまず、雰囲気もまあまあ。期待はずれではなかったけど、驚きはありませんでした。",
+  "rating": 5
+}, {
+  "location_id": 2,
+  "jap_user_id": 57,
+  "content": "ここは普通でした。食事はまずまず、雰囲気もまあまあ。期待はずれではなかったけど、驚きはありませんでした。",
+  "rating": 4
+}, {
+  "location_id": 3,
+  "jap_user_id": 62,
+  "content": "ハノイの場所、まあまあでした。景色は悪くないけど、他の場所も考えてみる価値があります。",
+  "rating": 3
+}, {
+  "location_id": 4,
+  "jap_user_id": 1,
+  "content": "ここは普通でした。食事はまずまず、雰囲気もまあまあ。期待はずれではなかったけど、驚きはありませんでした。",
+  "rating": 4
+}, {
+  "location_id": 5,
+  "jap_user_id": 43,
+  "content": "何度か来たことがありますが、いつも同じような感じです。まあまあ楽しいけど、新しい発見はありませんでした。",
+  "rating": 3
+}, {
+  "location_id": 6,
+  "jap_user_id": 51,
+  "content": "ここは普通でした。食事はまずまず、雰囲気もまあまあ。期待はずれではなかったけど、驚きはありませんでした。",
+  "rating": 4
+}, {
+  "location_id": 7,
+  "jap_user_id": 86,
+  "content": "ここでの時間は本当に楽しいものでした。地元の人たちもとても親切でした。",
+  "rating": 5
+}, {
+  "location_id": 8,
+  "jap_user_id": 13,
+  "content": "ハノイの魅力を感じることができる場所。歴史的な価値があります。",
+  "rating": 4
+}, {
+  "location_id": 9,
+  "jap_user_id": 22,
+  "content": "観光名所ですが、少し混雑していました。歴史は興味深いけど、もう少し穴場が欲しかったです。",
+  "rating": 4
+}, {
+  "location_id": 10,
+  "jap_user_id": 91,
+  "content": "魅力的なところではありますが、期待していたほどではありませんでした。でも、歴史的な価値はあります。",
+  "rating": 3
+}]

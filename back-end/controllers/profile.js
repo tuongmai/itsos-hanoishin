@@ -1,5 +1,5 @@
 import { ReasonPhrases, StatusCodes } from "http-status-codes";
-import { MatchingTour, Account } from "../../models";
+import { Matching, Account } from "../../models";
 
 const ProfileController = {
   profileView: async (req, res) => {
@@ -24,7 +24,7 @@ const ProfileController = {
       const matchingId = req.params.matchingId; // Assuming the matching tour id is passed in the request parameters
 
       // Find the matching tour by id
-      const matchingTour = await MatchingTour.findByPk(matchingId);
+      const matchingTour = await Matching.findByPk(matchingId);
 
       // If the matching tour is found, update the status to "cancel"
       if (matchingTour) {

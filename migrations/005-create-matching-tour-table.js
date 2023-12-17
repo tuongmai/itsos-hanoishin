@@ -24,8 +24,7 @@ module.exports = {
         allowNull: false
       },
       status: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.ENUM('キャンセル', '保留中', '拒否', '承認', '閉まった')
       },
       is_deleted: {
         type: DataTypes.INTEGER,
@@ -37,6 +36,14 @@ module.exports = {
         allowNull: true
       },
       matching_date: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      updatedAt: {
         type: DataTypes.DATE,
         allowNull: false
       }

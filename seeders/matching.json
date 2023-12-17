@@ -1,0 +1,501 @@
+[{
+  "jap_user_id": 53,
+  "tour_guide_id": 59,
+  "status": "拒否",
+  "matching_date": "2023-02-12"
+}, {
+  "jap_user_id": 25,
+  "tour_guide_id": 21,
+  "status": "承認",
+  "matching_date": "2024-03-22"
+}, {
+  "jap_user_id": 62,
+  "tour_guide_id": 93,
+  "status": "閉まった",
+  "matching_date": "2023-08-14"
+}, {
+  "jap_user_id": 54,
+  "tour_guide_id": 47,
+  "status": "閉まった",
+  "matching_date": "2023-11-04"
+}, {
+  "jap_user_id": 45,
+  "tour_guide_id": 76,
+  "status": "承認",
+  "matching_date": "2024-12-01"
+}, {
+  "jap_user_id": 61,
+  "tour_guide_id": 21,
+  "status": "承認",
+  "matching_date": "2024-06-10"
+}, {
+  "jap_user_id": 60,
+  "tour_guide_id": 47,
+  "status": "承認",
+  "matching_date": "2024-10-25"
+}, {
+  "jap_user_id": 5,
+  "tour_guide_id": 36,
+  "status": "承認",
+  "matching_date": "2024-03-07"
+}, {
+  "jap_user_id": 27,
+  "tour_guide_id": 84,
+  "status": "拒否",
+  "matching_date": "2023-10-02"
+}, {
+  "jap_user_id": 50,
+  "tour_guide_id": 4,
+  "status": "閉まった",
+  "matching_date": "2023-05-21"
+}, {
+  "jap_user_id": 11,
+  "tour_guide_id": 73,
+  "status": "拒否",
+  "matching_date": "2024-10-14"
+}, {
+  "jap_user_id": 6,
+  "tour_guide_id": 4,
+  "status": "拒否",
+  "matching_date": "2023-09-04"
+}, {
+  "jap_user_id": 70,
+  "tour_guide_id": 36,
+  "status": "閉まった",
+  "matching_date": "2023-03-01"
+}, {
+  "jap_user_id": 1,
+  "tour_guide_id": 59,
+  "status": "キャンセル",
+  "matching_date": "2023-04-24"
+}, {
+  "jap_user_id": 63,
+  "tour_guide_id": 4,
+  "status": "拒否",
+  "matching_date": "2023-12-21"
+}, {
+  "jap_user_id": 33,
+  "tour_guide_id": 23,
+  "status": "保留中",
+  "matching_date": "2024-07-21"
+}, {
+  "jap_user_id": 18,
+  "tour_guide_id": 59,
+  "status": "拒否",
+  "matching_date": "2024-04-01"
+}, {
+  "jap_user_id": 96,
+  "tour_guide_id": 99,
+  "status": "閉まった",
+  "matching_date": "2023-02-19"
+}, {
+  "jap_user_id": 78,
+  "tour_guide_id": 84,
+  "status": "拒否",
+  "matching_date": "2024-05-11"
+}, {
+  "jap_user_id": 32,
+  "tour_guide_id": 68,
+  "status": "閉まった",
+  "matching_date": "2023-06-04"
+}, {
+  "jap_user_id": 16,
+  "tour_guide_id": 36,
+  "status": "拒否",
+  "matching_date": "2023-12-21"
+}, {
+  "jap_user_id": 33,
+  "tour_guide_id": 76,
+  "status": "承認",
+  "matching_date": "2024-06-13"
+}, {
+  "jap_user_id": 91,
+  "tour_guide_id": 84,
+  "status": "キャンセル",
+  "matching_date": "2023-05-30"
+}, {
+  "jap_user_id": 64,
+  "tour_guide_id": 94,
+  "status": "キャンセル",
+  "matching_date": "2024-08-26"
+}, {
+  "jap_user_id": 77,
+  "tour_guide_id": 4,
+  "status": "拒否",
+  "matching_date": "2024-06-10"
+}, {
+  "jap_user_id": 82,
+  "tour_guide_id": 21,
+  "status": "閉まった",
+  "matching_date": "2023-05-10"
+}, {
+  "jap_user_id": 24,
+  "tour_guide_id": 10,
+  "status": "保留中",
+  "matching_date": "2024-02-02"
+}, {
+  "jap_user_id": 71,
+  "tour_guide_id": 35,
+  "status": "保留中",
+  "matching_date": "2024-04-26"
+}, {
+  "jap_user_id": 69,
+  "tour_guide_id": 36,
+  "status": "拒否",
+  "matching_date": "2023-10-23"
+}, {
+  "jap_user_id": 42,
+  "tour_guide_id": 99,
+  "status": "閉まった",
+  "matching_date": "2023-11-15"
+}, {
+  "jap_user_id": 16,
+  "tour_guide_id": 21,
+  "status": "承認",
+  "matching_date": "2024-04-04"
+}, {
+  "jap_user_id": 64,
+  "tour_guide_id": 23,
+  "status": "キャンセル",
+  "matching_date": "2024-10-11"
+}, {
+  "jap_user_id": 63,
+  "tour_guide_id": 73,
+  "status": "閉まった",
+  "matching_date": "2023-07-04"
+}, {
+  "jap_user_id": 98,
+  "tour_guide_id": 36,
+  "status": "キャンセル",
+  "matching_date": "2023-03-12"
+}, {
+  "jap_user_id": 20,
+  "tour_guide_id": 84,
+  "status": "キャンセル",
+  "matching_date": "2023-05-15"
+}, {
+  "jap_user_id": 65,
+  "tour_guide_id": 73,
+  "status": "閉まった",
+  "matching_date": "2023-10-24"
+}, {
+  "jap_user_id": 57,
+  "tour_guide_id": 73,
+  "status": "キャンセル",
+  "matching_date": "2024-08-17"
+}, {
+  "jap_user_id": 80,
+  "tour_guide_id": 94,
+  "status": "承認",
+  "matching_date": "2024-03-12"
+}, {
+  "jap_user_id": 49,
+  "tour_guide_id": 59,
+  "status": "承認",
+  "matching_date": "2024-10-10"
+}, {
+  "jap_user_id": 18,
+  "tour_guide_id": 94,
+  "status": "承認",
+  "matching_date": "2024-06-28"
+}, {
+  "jap_user_id": 46,
+  "tour_guide_id": 10,
+  "status": "拒否",
+  "matching_date": "2024-03-05"
+}, {
+  "jap_user_id": 24,
+  "tour_guide_id": 47,
+  "status": "保留中",
+  "matching_date": "2024-11-07"
+}, {
+  "jap_user_id": 52,
+  "tour_guide_id": 47,
+  "status": "拒否",
+  "matching_date": "2024-08-11"
+}, {
+  "jap_user_id": 41,
+  "tour_guide_id": 4,
+  "status": "承認",
+  "matching_date": "2024-09-30"
+}, {
+  "jap_user_id": 7,
+  "tour_guide_id": 47,
+  "status": "保留中",
+  "matching_date": "2024-02-05"
+}, {
+  "jap_user_id": 43,
+  "tour_guide_id": 36,
+  "status": "閉まった",
+  "matching_date": "2023-09-17"
+}, {
+  "jap_user_id": 78,
+  "tour_guide_id": 8,
+  "status": "拒否",
+  "matching_date": "2023-03-27"
+}, {
+  "jap_user_id": 26,
+  "tour_guide_id": 76,
+  "status": "キャンセル",
+  "matching_date": "2023-02-09"
+}, {
+  "jap_user_id": 95,
+  "tour_guide_id": 76,
+  "status": "閉まった",
+  "matching_date": "2023-06-13"
+}, {
+  "jap_user_id": 44,
+  "tour_guide_id": 36,
+  "status": "拒否",
+  "matching_date": "2024-06-16"
+}, {
+  "jap_user_id": 41,
+  "tour_guide_id": 21,
+  "status": "閉まった",
+  "matching_date": "2023-01-01"
+}, {
+  "jap_user_id": 30,
+  "tour_guide_id": 8,
+  "status": "閉まった",
+  "matching_date": "2023-04-08"
+}, {
+  "jap_user_id": 46,
+  "tour_guide_id": 47,
+  "status": "拒否",
+  "matching_date": "2023-03-28"
+}, {
+  "jap_user_id": 91,
+  "tour_guide_id": 94,
+  "status": "承認",
+  "matching_date": "2024-03-27"
+}, {
+  "jap_user_id": 96,
+  "tour_guide_id": 8,
+  "status": "閉まった",
+  "matching_date": "2023-04-25"
+}, {
+  "jap_user_id": 9,
+  "tour_guide_id": 10,
+  "status": "拒否",
+  "matching_date": "2024-07-06"
+}, {
+  "jap_user_id": 62,
+  "tour_guide_id": 10,
+  "status": "キャンセル",
+  "matching_date": "2023-07-05"
+}, {
+  "jap_user_id": 85,
+  "tour_guide_id": 47,
+  "status": "閉まった",
+  "matching_date": "2023-07-14"
+}, {
+  "jap_user_id": 97,
+  "tour_guide_id": 47,
+  "status": "キャンセル",
+  "matching_date": "2023-01-15"
+}, {
+  "jap_user_id": 72,
+  "tour_guide_id": 47,
+  "status": "閉まった",
+  "matching_date": "2023-07-09"
+}, {
+  "jap_user_id": 70,
+  "tour_guide_id": 4,
+  "status": "閉まった",
+  "matching_date": "2023-10-27"
+}, {
+  "jap_user_id": 64,
+  "tour_guide_id": 4,
+  "status": "拒否",
+  "matching_date": "2024-02-03"
+}, {
+  "jap_user_id": 70,
+  "tour_guide_id": 84,
+  "status": "承認",
+  "matching_date": "2024-11-21"
+}, {
+  "jap_user_id": 71,
+  "tour_guide_id": 21,
+  "status": "保留中",
+  "matching_date": "2024-02-11"
+}, {
+  "jap_user_id": 55,
+  "tour_guide_id": 10,
+  "status": "保留中",
+  "matching_date": "2024-03-23"
+}, {
+  "jap_user_id": 27,
+  "tour_guide_id": 94,
+  "status": "閉まった",
+  "matching_date": "2023-04-05"
+}, {
+  "jap_user_id": 41,
+  "tour_guide_id": 21,
+  "status": "承認",
+  "matching_date": "2024-09-16"
+}, {
+  "jap_user_id": 72,
+  "tour_guide_id": 68,
+  "status": "承認",
+  "matching_date": "2024-01-19"
+}, {
+  "jap_user_id": 62,
+  "tour_guide_id": 35,
+  "status": "閉まった",
+  "matching_date": "2023-05-02"
+}, {
+  "jap_user_id": 61,
+  "tour_guide_id": 94,
+  "status": "承認",
+  "matching_date": "2024-12-16"
+}, {
+  "jap_user_id": 27,
+  "tour_guide_id": 4,
+  "status": "拒否",
+  "matching_date": "2024-04-18"
+}, {
+  "jap_user_id": 44,
+  "tour_guide_id": 59,
+  "status": "キャンセル",
+  "matching_date": "2023-06-10"
+}, {
+  "jap_user_id": 65,
+  "tour_guide_id": 21,
+  "status": "保留中",
+  "matching_date": "2024-08-31"
+}, {
+  "jap_user_id": 11,
+  "tour_guide_id": 21,
+  "status": "保留中",
+  "matching_date": "2024-01-16"
+}, {
+  "jap_user_id": 54,
+  "tour_guide_id": 93,
+  "status": "承認",
+  "matching_date": "2024-12-20"
+}, {
+  "jap_user_id": 14,
+  "tour_guide_id": 4,
+  "status": "拒否",
+  "matching_date": "2023-08-02"
+}, {
+  "jap_user_id": 45,
+  "tour_guide_id": 23,
+  "status": "キャンセル",
+  "matching_date": "2024-03-17"
+}, {
+  "jap_user_id": 69,
+  "tour_guide_id": 84,
+  "status": "拒否",
+  "matching_date": "2024-02-26"
+}, {
+  "jap_user_id": 32,
+  "tour_guide_id": 99,
+  "status": "拒否",
+  "matching_date": "2024-09-27"
+}, {
+  "jap_user_id": 63,
+  "tour_guide_id": 47,
+  "status": "キャンセル",
+  "matching_date": "2023-06-26"
+}, {
+  "jap_user_id": 51,
+  "tour_guide_id": 68,
+  "status": "承認",
+  "matching_date": "2024-08-23"
+}, {
+  "jap_user_id": 14,
+  "tour_guide_id": 21,
+  "status": "キャンセル",
+  "matching_date": "2024-10-02"
+}, {
+  "jap_user_id": 19,
+  "tour_guide_id": 10,
+  "status": "拒否",
+  "matching_date": "2024-10-30"
+}, {
+  "jap_user_id": 92,
+  "tour_guide_id": 8,
+  "status": "閉まった",
+  "matching_date": "2023-07-29"
+}, {
+  "jap_user_id": 92,
+  "tour_guide_id": 59,
+  "status": "キャンセル",
+  "matching_date": "2023-09-11"
+}, {
+  "jap_user_id": 30,
+  "tour_guide_id": 4,
+  "status": "拒否",
+  "matching_date": "2022-12-18"
+}, {
+  "jap_user_id": 51,
+  "tour_guide_id": 10,
+  "status": "拒否",
+  "matching_date": "2024-04-23"
+}, {
+  "jap_user_id": 31,
+  "tour_guide_id": 23,
+  "status": "保留中",
+  "matching_date": "2024-01-02"
+}, {
+  "jap_user_id": 37,
+  "tour_guide_id": 21,
+  "status": "キャンセル",
+  "matching_date": "2023-08-02"
+}, {
+  "jap_user_id": 34,
+  "tour_guide_id": 76,
+  "status": "承認",
+  "matching_date": "2024-02-16"
+}, {
+  "jap_user_id": 83,
+  "tour_guide_id": 84,
+  "status": "閉まった",
+  "matching_date": "2023-05-03"
+}, {
+  "jap_user_id": 7,
+  "tour_guide_id": 8,
+  "status": "閉まった",
+  "matching_date": "2023-03-28"
+}, {
+  "jap_user_id": 58,
+  "tour_guide_id": 84,
+  "status": "拒否",
+  "matching_date": "2023-06-24"
+}, {
+  "jap_user_id": 2,
+  "tour_guide_id": 59,
+  "status": "承認",
+  "matching_date": "2024-02-09"
+}, {
+  "jap_user_id": 88,
+  "tour_guide_id": 35,
+  "status": "保留中",
+  "matching_date": "2024-08-07"
+}, {
+  "jap_user_id": 77,
+  "tour_guide_id": 35,
+  "status": "保留中",
+  "matching_date": "2024-02-27"
+}, {
+  "jap_user_id": 81,
+  "tour_guide_id": 4,
+  "status": "キャンセル",
+  "matching_date": "2024-10-14"
+}, {
+  "jap_user_id": 74,
+  "tour_guide_id": 76,
+  "status": "閉まった",
+  "matching_date": "2023-01-16"
+}, {
+  "jap_user_id": 44,
+  "tour_guide_id": 21,
+  "status": "保留中",
+  "matching_date": "2024-08-24"
+}, {
+  "jap_user_id": 57,
+  "tour_guide_id": 10,
+  "status": "拒否",
+  "matching_date": "2024-01-13"
+}]

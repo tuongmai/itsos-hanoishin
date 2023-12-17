@@ -22,6 +22,14 @@ module.exports = {
           key: 'user_id', // 'user_id' refers to column name in account table
         },
         allowNull: false
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false
       }
     });
   },

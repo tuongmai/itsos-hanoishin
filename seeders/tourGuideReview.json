@@ -1,0 +1,251 @@
+[{
+  "tour_guide_id": 4,
+  "jap_user_id": 28,
+  "content": "ツアーガイドは経験豊富で、柔軟にプランを調整してくれました。素晴らしいサービスでした。",
+  "rating": 5
+}, {
+  "tour_guide_id": 8,
+  "jap_user_id": 25,
+  "content": "ガイドの説明は平均的でした。もう少し深く掘り下げてほしかったです。",
+  "rating": 3
+}, {
+  "tour_guide_id": 10,
+  "jap_user_id": 83,
+  "content": "ガイドの説明は平均的でした。もう少し深く掘り下げてほしかったです。",
+  "rating": 5
+}, {
+  "tour_guide_id": 21,
+  "jap_user_id": 6,
+  "content": "ツアーガイドのおかげで、地元の隠れた名所やおすすめの食事スポットを発見できました。",
+  "rating": 3
+}, {
+  "tour_guide_id": 23,
+  "jap_user_id": 19,
+  "content": "ガイドの案内は十分でしたが、何か特別なツアーのオプションがあればよかったです。",
+  "rating": 3
+}, {
+  "tour_guide_id": 35,
+  "jap_user_id": 85,
+  "content": "素晴らしい案内をしてくれたツアーガイドに感謝。心からお勧めします。",
+  "rating": 3
+}, {
+  "tour_guide_id": 36,
+  "jap_user_id": 17,
+  "content": "ツアーガイドは素晴らしかった！親切で知識豊富、最高の経験を提供してくれました。",
+  "rating": 4
+}, {
+  "tour_guide_id": 47,
+  "jap_user_id": 19,
+  "content": "ツアーガイドは普通でした。情報は得られたけど、もう少し活気が欲しかったです。",
+  "rating": 4
+}, {
+  "tour_guide_id": 59,
+  "jap_user_id": 97,
+  "content": "ガイドの説明は平均的でした。もう少し深く掘り下げてほしかったです。",
+  "rating": 3
+}, {
+  "tour_guide_id": 68,
+  "jap_user_id": 15,
+  "content": "ガイドのおかげで、ハノイの美しい景色や文化に深く感動しました。",
+  "rating": 3
+}, {
+  "tour_guide_id": 73,
+  "jap_user_id": 28,
+  "content": "普通のガイド。感動はありませんでしたが、まあまあ満足しています。",
+  "rating": 3
+}, {
+  "tour_guide_id": 76,
+  "jap_user_id": 41,
+  "content": "ガイドのエネルギーと情熱に感動しました。楽しい旅行になりました。",
+  "rating": 5
+}, {
+  "tour_guide_id": 84,
+  "jap_user_id": 51,
+  "content": "知識が豊富で、また同じガイドに案内してもらいたいと思います。",
+  "rating": 4
+}, {
+  "tour_guide_id": 93,
+  "jap_user_id": 37,
+  "content": "知識が豊富で、また同じガイドに案内してもらいたいと思います。",
+  "rating": 4
+}, {
+  "tour_guide_id": 94,
+  "jap_user_id": 14,
+  "content": "ガイドの案内は十分でしたが、何か特別なアクティビティがあればよかったです。",
+  "rating": 5
+}, {
+  "tour_guide_id": 99,
+  "jap_user_id": 60,
+  "content": "普通のガイド。感動はありませんでしたが、まあまあ満足しています。",
+  "rating": 3
+}, {
+  "tour_guide_id": 4,
+  "jap_user_id": 31,
+  "content": "ガイドのおかげで、ハノイの歴史や文化を深く理解できました。感謝しています。",
+  "rating": 3
+}, {
+  "tour_guide_id": 8,
+  "jap_user_id": 31,
+  "content": "プロのツアーガイドでした。親しみやすく、質問にも丁寧に答えてくれました。",
+  "rating": 3
+}, {
+  "tour_guide_id": 10,
+  "jap_user_id": 65,
+  "content": "ツアーガイドは経験豊富で、柔軟にプランを調整してくれました。素晴らしいサービスでした。",
+  "rating": 3
+}, {
+  "tour_guide_id": 21,
+  "jap_user_id": 17,
+  "content": "ガイドのおかげで、ハノイの歴史や文化を深く理解できました。感謝しています。",
+  "rating": 4
+}, {
+  "tour_guide_id": 23,
+  "jap_user_id": 63,
+  "content": "ツアーガイドは経験豊富で、柔軟にプランを調整してくれました。素晴らしいサービスでした。",
+  "rating": 3
+}, {
+  "tour_guide_id": 35,
+  "jap_user_id": 32,
+  "content": "ガイドの案内は十分でしたが、何か特別なアクティビティがあればよかったです。",
+  "rating": 3
+}, {
+  "tour_guide_id": 36,
+  "jap_user_id": 50,
+  "content": "ツアーガイドのサービスは合格点。期待通りの体験でした。",
+  "rating": 3
+}, {
+  "tour_guide_id": 47,
+  "jap_user_id": 25,
+  "content": "ガイドのおかげで、ハノイの歴史や文化を深く理解できました。感謝しています。",
+  "rating": 5
+}, {
+  "tour_guide_id": 59,
+  "jap_user_id": 83,
+  "content": "ガイドの説明は平均的でした。もう少し深く掘り下げてほしかったです。",
+  "rating": 3
+}, {
+  "tour_guide_id": 68,
+  "jap_user_id": 88,
+  "content": "ツアーガイドのおかげで、地元の隠れた名所やおすすめの食事スポットを発見できました。",
+  "rating": 3
+}, {
+  "tour_guide_id": 73,
+  "jap_user_id": 81,
+  "content": "ガイドのおかげで、ハノイの美しい景色や文化に深く感動しました。",
+  "rating": 4
+}, {
+  "tour_guide_id": 76,
+  "jap_user_id": 1,
+  "content": "ガイドの説明は平均的でした。もう少し深く掘り下げてほしかったです。",
+  "rating": 4
+}, {
+  "tour_guide_id": 84,
+  "jap_user_id": 69,
+  "content": "普通のツアーガイド。期待通りでしたが、何か特別なものは感じませんでした。",
+  "rating": 3
+}, {
+  "tour_guide_id": 93,
+  "jap_user_id": 87,
+  "content": "ガイドのエネルギーと情熱に感動しました。楽しい旅行になりました。",
+  "rating": 3
+}, {
+  "tour_guide_id": 94,
+  "jap_user_id": 27,
+  "content": "ツアーガイドのサービスは合格点。期待通りの体験でした。",
+  "rating": 4
+}, {
+  "tour_guide_id": 99,
+  "jap_user_id": 75,
+  "content": "ツアーガイドのおかげで、地元の隠れた名所やおすすめの食事スポットを発見できました。",
+  "rating": 4
+}, {
+  "tour_guide_id": 4,
+  "jap_user_id": 16,
+  "content": "プロのツアーガイドでした。親しみやすく、質問にも丁寧に答えてくれました。",
+  "rating": 4
+}, {
+  "tour_guide_id": 8,
+  "jap_user_id": 56,
+  "content": "ガイドの説明は平均的でした。もう少し深く掘り下げてほしかったです。",
+  "rating": 4
+}, {
+  "tour_guide_id": 10,
+  "jap_user_id": 66,
+  "content": "ツアーガイドは悪くなかったけど、もう少し個性的なアプローチがあれば良かったです。",
+  "rating": 3
+}, {
+  "tour_guide_id": 21,
+  "jap_user_id": 33,
+  "content": "ガイドのおかげで、ハノイの歴史や文化を深く理解できました。感謝しています。",
+  "rating": 4
+}, {
+  "tour_guide_id": 23,
+  "jap_user_id": 58,
+  "content": "プロのツアーガイドでした。親しみやすく、質問にも丁寧に答えてくれました。",
+  "rating": 4
+}, {
+  "tour_guide_id": 35,
+  "jap_user_id": 63,
+  "content": "ツアーガイドは良かったけど、他のガイドとの違いがあまり感じられませんでした。",
+  "rating": 3
+}, {
+  "tour_guide_id": 36,
+  "jap_user_id": 25,
+  "content": "ガイドのおかげで、ハノイの歴史や文化を深く理解できました。感謝しています。",
+  "rating": 3
+}, {
+  "tour_guide_id": 47,
+  "jap_user_id": 78,
+  "content": "ガイドのおかげで、ハノイの歴史や文化を深く理解できました。感謝しています。",
+  "rating": 5
+}, {
+  "tour_guide_id": 59,
+  "jap_user_id": 3,
+  "content": "ガイドは親切でしたが、もう少しパーソナリティを感じたかったです。",
+  "rating": 4
+}, {
+  "tour_guide_id": 68,
+  "jap_user_id": 62,
+  "content": "普通のツアーガイド。期待通りでしたが、何か特別なものは感じませんでした。",
+  "rating": 4
+}, {
+  "tour_guide_id": 73,
+  "jap_user_id": 20,
+  "content": "ツアーガイドは経験豊富で、柔軟にプランを調整してくれました。素晴らしいサービスでした。",
+  "rating": 5
+}, {
+  "tour_guide_id": 76,
+  "jap_user_id": 51,
+  "content": "プロのツアーガイドでした。親しみやすく、質問にも丁寧に答えてくれました。",
+  "rating": 4
+}, {
+  "tour_guide_id": 84,
+  "jap_user_id": 83,
+  "content": "ツアーガイドは親しみやすく、面白い話で旅行をより楽しくしてくれました。",
+  "rating": 4
+}, {
+  "tour_guide_id": 93,
+  "jap_user_id": 16,
+  "content": "ツアーガイドは悪くなかったけど、もう少し個性的なアプローチがあれば良かったです。",
+  "rating": 3
+}, {
+  "tour_guide_id": 94,
+  "jap_user_id": 31,
+  "content": "ツアーガイドは親しみやすく、面白い話で旅行をより楽しくしてくれました。",
+  "rating": 3
+}, {
+  "tour_guide_id": 99,
+  "jap_user_id": 51,
+  "content": "素晴らしい案内をしてくれたツアーガイドに感謝。心からお勧めします。",
+  "rating": 3
+}, {
+  "tour_guide_id": 4,
+  "jap_user_id": 31,
+  "content": "ツアーガイドのサービスは合格点。期待通りの体験でした。",
+  "rating": 3
+}, {
+  "tour_guide_id": 8,
+  "jap_user_id": 97,
+  "content": "ガイドの案内は十分でしたが、何か特別なアクティビティがあればよかったです。",
+  "rating": 5
+}]

@@ -39,8 +39,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       status: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: DataTypes.ENUM('キャンセル', '保留中', '拒否', '承認', '閉まった'),
       },
       is_deleted: {
         type: DataTypes.INTEGER,
@@ -61,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Matching",
       tableName: "matching_tour",
       underscored: true,
-      timestamps: false,
+      timestamps: true,
     }
   );
 

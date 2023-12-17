@@ -22,6 +22,14 @@ module.exports = {
           key: 'location_id', // 'location_id' refers to column name in location table
         },
         allowNull: false
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: false
       }
     });
   },
