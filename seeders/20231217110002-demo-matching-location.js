@@ -9,8 +9,8 @@ module.exports = {
     const matchingLocations = JSON.parse(rawData);
     await queryInterface.bulkInsert('matching_location', matchingLocations.map(matchingLocation => ({
       ...matchingLocation,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      created_at: new Date(),
+      updated_at: new Date(),
     })), {});
   },
 

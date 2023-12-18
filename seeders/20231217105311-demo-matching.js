@@ -9,8 +9,8 @@ module.exports = {
     const matchings = JSON.parse(rawData);
     await queryInterface.bulkInsert('matching_tour', matchings.map(matching => ({
       ...matching,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      created_at: new Date(),
+      updated_at: new Date(),
     })), {});
   },
 

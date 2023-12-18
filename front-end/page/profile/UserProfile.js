@@ -79,6 +79,8 @@ const HistoryTable = () => {
 
 const UserProfile = () => {
   const { Content, Sider } = Layout;
+  const user = JSON.parse(localStorage.getItem("user")) || {};
+  const role = localStorage.getItem("role") || "";
   const classes = useStyles();
 
   const items = [
@@ -127,17 +129,17 @@ const UserProfile = () => {
                 >
                   <Row style={{ display: "flex", flexDirection: "column" }}>
                     <strong>ユーザー名</strong>
-                    <div style={{ paddingLeft: "10px" }}>nghiemdinhminh</div>
+                    <div style={{ paddingLeft: "10px" }}>{user.username}</div>
                   </Row>
                   <Row style={{ display: "flex", flexDirection: "column" }}>
                     <strong>メール</strong>
                     <div style={{ paddingLeft: "10px" }}>
-                      nghiemdinhminh2002@gmail.com
+                      {user.email}
                     </div>
                   </Row>
                   <Row style={{ display: "flex", flexDirection: "column" }}>
                     <strong>電話番号</strong>
-                    <div style={{ paddingLeft: "10px" }}>0936055632</div>
+                    <div style={{ paddingLeft: "10px" }}>{user.phone || ""}</div>
                   </Row>
                 </Space>
               </Space>

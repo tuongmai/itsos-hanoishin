@@ -9,8 +9,8 @@ module.exports = {
     const tourGuideReviews = JSON.parse(rawData);
     await queryInterface.bulkInsert('tour_guide_review', tourGuideReviews.map(tourGuideReview => ({
       ...tourGuideReview,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      created_at: new Date(),
+      updated_at: new Date(),
     })), {});
   },
 

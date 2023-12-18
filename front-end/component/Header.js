@@ -5,6 +5,8 @@ import { getBaseUrl } from "../utils";
 
 const Header = () => {
   const baseUrl = getBaseUrl();
+  const user = JSON.parse(localStorage.getItem("user")) || {};
+  const role = localStorage.getItem("role") || "";
   const items = [
     {
       key: "1",
@@ -12,7 +14,7 @@ const Header = () => {
     },
     {
       key: "2",
-      label: <a>ログアウト</a>,
+      label: <a href={`${baseUrl}/home`} onClick={() => { localStorage.clear() }} >ログアウト</a>,
     },
   ];
 
@@ -42,9 +44,13 @@ const Header = () => {
           </div>
         </div>
         <div className="site-header__end">
-          <Dropdown menu={{ items }} placement="bottom" arrow>
-            <a href="#" style={{textDecoration: "none"}}>Vinhさんこんにちは！</a>
-          </Dropdown>
+          {
+            role === ""
+              ? <a href={`${baseUrl}/account`} style={{textDecoration: "none"}}>ログイン</a>
+              : <Dropdown menu={{ items }} placement="bottom" arrow>
+                  <a href="#" style={{textDecoration: "none"}}>{`${user.username}さんこんにちは！`}</a>
+                </Dropdown>
+          }
         </div>
       </div>
     </header>

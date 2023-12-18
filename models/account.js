@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Account.init(
     {
-      user_id: {
+      userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true, // Set auto-increment
@@ -63,7 +63,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Account",
       tableName: "account",
       underscored: true,
-      timestamps: false,
       indexes: [
         {
           unique: true,

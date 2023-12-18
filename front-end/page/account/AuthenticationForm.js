@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './AuthenticationForm.css';
 import axios from 'axios'
 import Swal from 'sweetalert2';
+import Header from '../../component/Header';
+import { getBaseUrl } from '../../utils';
+
+const baseUrl = getBaseUrl();
 
 const LoginComponent = ({setIsLoginScreen}) => {
   const [username, setUsername] = useState('');
@@ -14,7 +18,7 @@ const LoginComponent = ({setIsLoginScreen}) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/account/login', {
+      const response = await axios.post(`${baseUrl}/api/account/login`, {
         username: username,
         password: password,
       });
@@ -25,6 +29,10 @@ const LoginComponent = ({setIsLoginScreen}) => {
           text: "Sign in Successfully!",
           icon: "success"
         });
+        const user = response.data.user;
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("role", user.role);
+        window.location.href = `${baseUrl}/home`
       }
     } catch (error) {
       console.error('Error during login API call:', error);
@@ -33,7 +41,9 @@ const LoginComponent = ({setIsLoginScreen}) => {
   return (
     <>
       <div className="app-logo">
-        <img src="https://www.saigontourist.net/uploads/destination/TrongNuoc/Hochiminh/xe-hop-on.jpg" alt="App Logo" />
+        <a href={`${baseUrl}/home`} className="brand" style={{textDecoration: "none"}}>
+          ハノイシーン
+        </a>
       </div>
       <div className="container" id="container">
         <div className="form-container log-in-container">
@@ -88,7 +98,7 @@ const RegisterComponent = ({setIsLoginScreen}) => {
         return;
       }
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/account/register', {
+        const response = await axios.post(`${baseUrl}/api/account/register`, {
           email: email,
           username: username,
           password: password,
@@ -100,6 +110,10 @@ const RegisterComponent = ({setIsLoginScreen}) => {
             text: "Sign up Successfully!",
             icon: "success"
           });
+          const user = response.data.user;
+          localStorage.setItem("user", user);
+          localStorage.setItem("role", user.role);
+          window.location.href = `${baseUrl}/home`
         }
       } catch (error) {
         console.error('Error during login API call:', error);
@@ -108,7 +122,9 @@ const RegisterComponent = ({setIsLoginScreen}) => {
   return (
     <>
       <div className="app-logo">
-        <img src="https://www.saigontourist.net/uploads/destination/TrongNuoc/Hochiminh/xe-hop-on.jpg" alt="App Logo" />
+        <a href={`${baseUrl}/home`} className="brand" style={{textDecoration: "none"}}>
+          ハノイシーン
+        </a>
       </div>
       <div className="container" id="container">
         <div className="form-container register-container">

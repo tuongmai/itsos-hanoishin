@@ -7,6 +7,6 @@ const Profile = () => {
   )
 }
 
-const container = document.getElementById("homepage");
+const container = document.getElementById("profile");
 const root = createRoot(container);
 root.render(<Profile />);

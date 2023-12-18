@@ -6,27 +6,27 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.belongsTo(models.Matching, {
-        foreignKey: "matching_id",
+        foreignKey: "matchingId",
       });
       this.belongsTo(models.Location, {
-        foreignKey: "location_id",
+        foreignKey: "locationId",
       });
     }
   }
 
   MatchingLocation.init(
     {
-      matching_location_id: {
+      matchingLocationId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true, // Set auto-increment
         allowNull: false
       },
-      matching_id: {
+      matchingId: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
-      location_id: {
+      locationId: {
         type: DataTypes.INTEGER,
         allowNull: false
       }
@@ -36,7 +36,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "MatchingLocation",
       tableName: "matching_location",
       underscored: true,
-      timestamps: false
     }
   );
 
