@@ -9,8 +9,8 @@ module.exports = {
     const skills = JSON.parse(rawData);
     await queryInterface.bulkInsert('tour_guide_skill', skills.map(skill => ({
       ...skill,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      created_at: new Date(),
+      updated_at: new Date(),
     })), {});
   },
 

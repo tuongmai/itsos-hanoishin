@@ -9,8 +9,8 @@ module.exports = {
     const accounts = JSON.parse(rawData);
     await queryInterface.bulkInsert('account', accounts.map(account => ({
       ...account,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      created_at: new Date(),
+      updated_at: new Date(),
     })), {});
   },
 

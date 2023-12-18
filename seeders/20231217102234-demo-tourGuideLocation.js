@@ -9,8 +9,8 @@ module.exports = {
     const list = JSON.parse(rawData);
     await queryInterface.bulkInsert('tour_guide_location', list.map(item => ({
       ...item,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      created_at: new Date(),
+      updated_at: new Date(),
     })), {});
   },
 

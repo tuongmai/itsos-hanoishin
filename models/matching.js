@@ -6,51 +6,51 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.hasMany(models.MatchingLocation, {
-        foreignKey: "matching_id",
+        foreignKey: "matchingId",
       });
       this.belongsTo(models.Account, {
-        foreignKey: "jap_user_id"
+        foreignKey: "japUserId"
       });
       this.belongsTo(models.Account, {
-        foreignKey: "tour_guide_id"
+        foreignKey: "tourGuideId"
       });
       this.belongsToMany(models.Location, {
         through: models.MatchingLocation,
         unique: false,
-        foreignKey: "matching_id"
+        foreignKey: "matchingId"
       });
     }
   }
 
   Matching.init(
     {
-      matching_id: {
+      matchingId: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true, // Set auto-increment
         allowNull: false
       },
-      jap_user_id: {
+      japUserId: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
-      tour_guide_id: {
+      tourGuideId: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
       status: {
         type: DataTypes.ENUM('キャンセル', '保留中', '拒否', '承認', '閉まった'),
       },
-      is_deleted: {
+      isDeleted: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 0
       },
-      deleted_by: {
+      deletedBy: {
         type: DataTypes.INTEGER,
         allowNull: true
       },
-      matching_date: {
+      matchingDate: {
         type: DataTypes.DATE,
         allowNull: false
       }
@@ -60,7 +60,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Matching",
       tableName: "matching_tour",
       underscored: true,
-      timestamps: false,
     }
   );
 

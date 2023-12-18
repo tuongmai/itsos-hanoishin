@@ -38,11 +38,11 @@ module.exports = {
       role: {
         type: DataTypes.ENUM('日本人', 'ツアーガイド', '管理者')
       },
-      createdAt: {
+      created_at: {
         type: DataTypes.DATE,
         allowNull: false
       },
-      updatedAt: {
+      updated_at: {
         type: DataTypes.DATE,
         allowNull: false
       }

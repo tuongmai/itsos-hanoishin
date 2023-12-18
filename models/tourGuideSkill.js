@@ -6,20 +6,20 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
     //   define association here
       this.belongsTo(models.TourGuideSkill, {
-        foreignKey: "tour_guide_id"
+        foreignKey: "tourGuideId"
       });
     }
   }
 
   TourGuideSkill.init(
     {
-      skill_id: {
+      skillId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true, // Set auto-increment
         primaryKey: true, // Define it as the primary key
       },
-      tour_guide_id: {
+      tourGuideId: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         defaultValue: null
       },
-      skill_detail: {
+      skillDetail: {
         type: DataTypes.STRING,
         defaultValue: null,
       }
@@ -37,7 +37,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "TourGuideSkill",
       tableName: "tour_guide_skill",
       underscored: true,
-      timestamps: false
     }
   );
 
