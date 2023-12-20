@@ -3,6 +3,7 @@ import tourGuideRouters from "./tourGuide";
 import profileRouter from "./profile";
 import matchingRouters from "./matching";
 import locationRouters from "./location";
+import reviewRoutes from "./review";
 
 export default function routes(app) {
   app.get("/account", (req, res) => {
@@ -40,4 +41,4 @@ export default function routes(app) {
 }
 
 
-export { accountRouters, tourGuideRouters, locationRouters, matchingRouters, profileRouter };
+export { accountRouters, tourGuideRouters, locationRouters, matchingRouters, profileRouter, reviewRoutes };

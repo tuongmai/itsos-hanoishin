@@ -27,7 +27,9 @@ const LoginComponent = ({setIsLoginScreen}) => {
         Swal.fire({
           title: "Sign in Successfully!",
           text: "Sign in Successfully!",
+          confirmButtonText: "はい。",
           icon: "success"
+          
         });
         const user = response.data.user;
         localStorage.setItem("user", JSON.stringify(user));
@@ -108,7 +110,8 @@ const RegisterComponent = ({setIsLoginScreen}) => {
           Swal.fire({
             title: "Sign up Successfully!",
             text: "Sign up Successfully!",
-            icon: "success"
+            icon: "success",
+            confirmButtonText: "はい。",
           });
           const user = response.data.user;
           localStorage.setItem("user", JSON.stringify(user));

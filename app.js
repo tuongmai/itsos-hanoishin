@@ -26,7 +26,8 @@ import routes, {
   accountRouters,
   tourGuideRouters,
   locationRouters,
-  matchingRouters
+  matchingRouters,
+  reviewRoutes
 } from "./back-end/routes";
 require("dotenv").config();
 // Bootstrap Express
@@ -72,7 +73,7 @@ accountRouters(app);
 tourGuideRouters(app);
 locationRouters(app);
 matchingRouters(app);
-
+reviewRoutes(app);
 // Boot the HTTP server
 http.createServer(app).listen(port, () => {
   console.log("App server running at http://" + os.hostname() + ":" + port);
