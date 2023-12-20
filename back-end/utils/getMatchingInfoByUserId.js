@@ -16,7 +16,7 @@ async function getMatchingInfoByUserId(currentUserId) {
         {
           model: Account,
           as: 'tourGuide',
-          attributes: ['username'],
+          attributes: ['username', 'userId'],
         },
         {
           model: MatchingLocation,
@@ -50,6 +50,7 @@ function formatMatchingInfo(matching) {
     key: matching.matchingId.toString(),
     matchingDate: formatDate(matching.matchingDate),
     tourGuideUserName: matching.tourGuide.username,
+    tourGuide: matching.tourGuide,
     createdAt: formatDate(matching.createdAt),
     status: matching.status,
     location: matching.MatchingLocations,
