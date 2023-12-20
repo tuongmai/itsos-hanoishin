@@ -111,7 +111,7 @@ const RegisterComponent = ({setIsLoginScreen}) => {
             icon: "success"
           });
           const user = response.data.user;
-          localStorage.setItem("user", user);
+          localStorage.setItem("user", JSON.stringify(user));
           localStorage.setItem("role", user.role);
           window.location.href = `${baseUrl}/home`
         }

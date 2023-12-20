@@ -9,9 +9,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "matchingId",
       });
       this.belongsTo(models.Account, {
+        as: 'japUser',
         foreignKey: "japUserId"
       });
       this.belongsTo(models.Account, {
+        as: 'tourGuide',
         foreignKey: "tourGuideId"
       });
       this.belongsToMany(models.Location, {
