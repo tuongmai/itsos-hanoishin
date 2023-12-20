@@ -38,6 +38,11 @@ export default function routes(app) {
       title: "予約"
     })
   })
+  app.get("/request", (req, res) => {
+    res.render("requestMatching.hbs", {
+      title: "リクエストマッチング"
+    })
+  })
 }
 
 

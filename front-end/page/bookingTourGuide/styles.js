@@ -12,10 +12,14 @@ const useStyles = createUseStyles({
     border: "solid 1px black",
     borderRadius: "5px",
     position: "relative",
-    overflow: "hidden"
+    overflow: "hidden",
+    cursor: "pointer",
+    '&:hover': {
+      boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)"
+    }
   },
   layout: {
-    padding: "10px 50px"
+    padding: "10px 50px",
   },
   titleCard: {
     fontSize: "20px",

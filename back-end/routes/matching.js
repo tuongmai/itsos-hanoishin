@@ -13,4 +13,5 @@ export default function location(app) {
   router.get("/tg/:id", MatchingController.getMatchingByTgId);
   router.post("/", MatchingController.createMatching);
   router.put("/cancel-matching/:id", MatchingController.cancelMatching);
+  router.put("/agree-matching/:id", MatchingController.agreeMatching);
 }

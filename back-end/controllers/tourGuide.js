@@ -1,34 +1,34 @@
 import { TourGuideSkill } from "../../models";
-import { Account } from "../../models";
 import { Op } from "sequelize";
+import { Account, TourGuideLocation } from "../../models";
 
 const TourGuideController = {
   tourGuideList: async (req, res) => {
     try {
       const tourGuide = await Account.findAll({
         include: [
-            {
-              model: TourGuideSkill,
-              required: true,
-            },
-          ],
+          {
+            model: TourGuideSkill,
+            required: true,
+          },
+        ],
       });
       res.status(201).json(tourGuide);
     } catch (error) {
       console.error(error);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send("Internal Server Error");
     }
-    },
+  },
   getById: async (req, res) => {
     try {
       const userId = req.param("id");
       const tourGuide = await Account.findAll({
         include: [
-            {
-              model: TourGuideSkill,
-              required: true,
-            },
-          ],
+          {
+            model: TourGuideSkill,
+            required: true,
+          },
+        ],
         where: {
           user_id: userId,
         },
@@ -36,7 +36,7 @@ const TourGuideController = {
       res.status(201).json(tourGuide);
     } catch (error) {
       console.error(error);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send("Internal Server Error");
     }
   },
   searchBySkillName: async (req, res) => {
@@ -44,36 +44,61 @@ const TourGuideController = {
       const skillName = req.param("name");
       const tourGuideSkillQuery = await Account.findAll({
         include: [
-            {
-              model: TourGuideSkill,
-              required: true,
-              where: {
-                skill: {
-                  [Op.like]: '%' + skillName + '%'
-                },
+          {
+            model: TourGuideSkill,
+            required: true,
+            where: {
+              skill: {
+                [Op.like]: "%" + skillName + "%",
               },
             },
-          ],
-        attributes: ['user_id'],
+          },
+        ],
+        attributes: ["user_id"],
       });
-      const tourGuideIds = tourGuideSkillQuery.map(x => x.user_id)
+      const tourGuideIds = tourGuideSkillQuery.map((x) => x.user_id);
       const tourGuide = await Account.findAll({
         include: [
-            {
-              model: TourGuideSkill,
-              required: true,
-            },
-          ],
+          {
+            model: TourGuideSkill,
+            required: true,
+          },
+        ],
         where: {
           user_id: {
-            [Op.in]: tourGuideIds
+            [Op.in]: tourGuideIds,
           },
         },
       });
       res.status(201).json(tourGuide);
     } catch (error) {
       console.error(error);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send("Internal Server Error");
+    }
+  },
+
+  getTourGuideByLocationId: async (req, res) => {
+    try {
+      const locationId = req.param("locationId");
+      const tourGuideList = await Account.findAll({
+        include: [
+          {
+            model: TourGuideLocation,
+            require: true,
+            where: {
+              location_id: locationId,
+            },
+          },
+          {
+            model: TourGuideSkill,
+            require: true
+          }
+        ]
+      })
+      res.status(201).json(tourGuideList);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Internal Server Error");
     }
   },
   searchByName: async (req, res) => {
@@ -81,22 +106,22 @@ const TourGuideController = {
       const name = req.param("name");
       const tourGuide = await Account.findAll({
         include: [
-            {
-              model: TourGuideSkill,
-              required: false,
-            },
-          ],
+          {
+            model: TourGuideSkill,
+            required: false,
+          },
+        ],
         where: {
           username: {
-            [Op.like]: '%' + name + '%'
+            [Op.like]: "%" + name + "%",
           },
-          role: "TOURGUIDE"
+          role: "TOURGUIDE",
         },
       });
       res.status(201).json(tourGuide);
     } catch (error) {
       console.error(error);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send("Internal Server Error");
     }
   },
 };

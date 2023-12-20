@@ -1,7 +1,8 @@
 import { ReasonPhrases, StatusCodes } from "http-status-codes";
-import { Location, Matching, MatchingLocation } from "../../models";
-import { Op } from 'sequelize';
-import { getMatchingInfoByUserId } from '../utils/getMatchingInfoByUserId';
+import { Location, Matching, MatchingLocation, Account } from "../../models";
+import { Op } from "sequelize";
+import { getMatchingInfoByUserId } from "../utils/getMatchingInfoByUserId";
+import Dayjs from "dayjs";
 
 const MatchingController = {
   matchingList: async (req, res) => {
@@ -32,7 +33,9 @@ const MatchingController = {
         },
       });
 
-      const formattedList = matchingList.map((matching) => formatMatchingInfo(matching));
+      const formattedList = matchingList.map((matching) =>
+        formatMatchingInfo(matching)
+      );
 
       res.status(StatusCodes.OK).json(formattedList);
     } catch (error) {
@@ -52,15 +55,18 @@ const MatchingController = {
             model: Location,
             required: true,
           },
+          {
+            model: Account,
+            required: true,
+            as: "japUser",
+          },
         ],
         where: {
           tourGuideId: userId,
         },
       });
 
-      const formattedList = matchingList.map((matching) => formatMatchingInfo(matching));
-
-      res.status(StatusCodes.OK).json(formattedList);
+      res.status(StatusCodes.OK).json(matchingList);
     } catch (error) {
       console.error(error);
       return res
@@ -72,15 +78,21 @@ const MatchingController = {
   createMatching: async (req, res) => {
     try {
       const { japUserId, tourGuideId, locationId, matchingDate } = req.body;
-      const existMatching = await Matching.findOne({
+      const existMatching = await Matching.findAll({
         where: {
           japUserId,
           tourGuideId,
-          matchingDate,
         },
       });
+      const existMatchingFilter = existMatching.filter((matching) => {
 
-      if (existMatching)
+        const isSameDate =
+          Dayjs(matching.dataValues.matchingDate).format("YYYY/MM/DD") ===
+          Dayjs(matchingDate).format("YYYY/MM/DD");
+        return isSameDate && matching.dataValues.status === "保留中";
+      });
+
+      if (existMatchingFilter.length !== 0)
         return res
           .status(StatusCodes.BAD_REQUEST)
           .json({ error: "Can't match the same person on the same day" });
@@ -99,7 +111,7 @@ const MatchingController = {
 
       // const matchResult = await getMatchingInfo(matching.matchingId);
 
-      // res.status(StatusCodes.CREATED).json(matchResult);
+      res.status(StatusCodes.CREATED).json({ message: "Succefully" });
     } catch (error) {
       console.error(error);
       return res
@@ -113,24 +125,48 @@ const MatchingController = {
       const matching = await Matching.findByPk(matchingId);
 
       if (!matching) {
-        return res.status(404).json({ error: 'Matching not found' });
+        return res.status(404).json({ error: "Matching not found" });
       }
       // Check if the matching is cancellable (you might have additional conditions)
-      if (matching.status !== '保留中') {
-        return res.status(400).json({ error: 'Matching cannot be canceled' });
+      if (matching.status !== "保留中") {
+        return res.status(400).json({ error: "Matching cannot be canceled" });
       }
 
       // Update the status to "Cancel"
-      matching.status = 'キャンセル';
+      matching.status = "キャンセル";
       matching.save();
 
       // Respond with the updated matching
-      res.json({ message: 'Matching canceled successfully', matching });
+      res.json({ message: "Matching canceled successfully", matching });
     } catch (error) {
-      console.error('Error canceling matching:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
+      console.error("Error canceling matching:", error);
+      res.status(500).json({ error: "Internal Server Error" });
     }
-  }
+  },
+  agreeMatching: async (req, res) => {
+    const matchingId = req.params.id;
+    try {
+      const matching = await Matching.findByPk(matchingId);
+
+      if (!matching) {
+        return res.status(404).json({ error: "Matching not found" });
+      }
+      // Check if the matching is cancellable (you might have additional conditions)
+      if (matching.status !== "保留中") {
+        return res.status(400).json({ error: "Matching cannot be agreed" });
+      }
+
+      // Update the status to "Cancel"
+      matching.status = "承認";
+      matching.save();
+
+      // Respond with the updated matching
+      res.json({ message: "Matching agreed successfully", matching });
+    } catch (error) {
+      console.error("Error agreement matching:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  },
 };
 
 function formatMatchingInfo(matching) {
@@ -140,7 +176,10 @@ function formatMatchingInfo(matching) {
     date: matching.matching_date.toLocaleDateString("en-US"), // Update to 'matching_date'
     createAt: matching.created_at.toLocaleDateString("en-US"), // Update to 'created_at'
     status: matching.status,
-    location: matching.MatchingLocations.length > 0 ? matching.MatchingLocations[0].Location.name : "",
+    location:
+      matching.MatchingLocations.length > 0
+        ? matching.MatchingLocations[0].Location.name
+        : "",
   };
 }
 

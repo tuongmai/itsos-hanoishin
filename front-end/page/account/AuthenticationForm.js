@@ -84,6 +84,7 @@ const RegisterComponent = ({setIsLoginScreen}) => {
   const [email, setEmail] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [accountType, setAccountType] = useState('');
+  const baseUrl = getBaseUrl();
 
   const handleLoginClick = (event) => {
       event.preventDefault();

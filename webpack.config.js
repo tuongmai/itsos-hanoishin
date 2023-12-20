@@ -12,7 +12,8 @@ module.exports = (env, args) => ({
     location: ["./front-end/page/location/index.js"],
     profile: ["./front-end/page/profile/index.js"],
     homepage: ["./front-end/page/homepage/index.js"],
-    bookingTourGuide: ["./front-end/page/bookingTourGuide/index.js"]
+    bookingTourGuide: ["./front-end/page/bookingTourGuide/index.js"],
+    requestMatching: ["./front-end/page/requestMatching/index.js"]
   },
   output: {
     path: path.join(__dirname, "dist"),

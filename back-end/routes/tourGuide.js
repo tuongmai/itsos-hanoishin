@@ -12,4 +12,5 @@ export default function tourGuide(app) {
   router.get( "/:id", TourGuideController.getById);
   router.get( "/skill/:name", TourGuideController.searchBySkillName);
   router.get( "/name/:name", TourGuideController.searchByName);
+  router.get("/locationId/:locationId", TourGuideController.getTourGuideByLocationId)
 }
