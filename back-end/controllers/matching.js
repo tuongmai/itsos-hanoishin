@@ -1,20 +1,14 @@
 import { ReasonPhrases, StatusCodes } from "http-status-codes";
 import { Location, Matching, MatchingLocation } from "../../models";
+import { Op } from 'sequelize';
+import { getMatchingInfoByUserId } from '../utils/getMatchingInfoByUserId';
 
 const MatchingController = {
   matchingList: async (req, res) => {
+    const userId = req.params.id;
     try {
-      // const searchText = req.query.searchText || "";
-      const matchingList = await Matching.findAll({
-        include: [
-            {
-              model: Location,
-              required: true,
-            },
-          ]
-      });
-
-      res.status(201).json(matchingList);
+      const matchingList = await getMatchingInfoByUserId(userId);
+      res.status(StatusCodes.OK).json(matchingList);
     } catch (error) {
       console.error(error);
       return res
@@ -22,22 +16,25 @@ const MatchingController = {
         .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
     }
   },
+
   getMatchingByJpId: async (req, res) => {
     try {
-      const userId = req.param("id");
+      const userId = req.params.id;
       const matchingList = await Matching.findAll({
         include: [
-            {
-              model: Location,
-              required: true,
-            },
-          ],
+          {
+            model: Location,
+            required: true,
+          },
+        ],
         where: {
-          jap_user_id: userId,
-        }
+          japUserId: userId,
+        },
       });
 
-      res.status(201).json(matchingList);
+      const formattedList = matchingList.map((matching) => formatMatchingInfo(matching));
+
+      res.status(StatusCodes.OK).json(formattedList);
     } catch (error) {
       console.error(error);
       return res
@@ -45,22 +42,25 @@ const MatchingController = {
         .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
     }
   },
+
   getMatchingByTgId: async (req, res) => {
     try {
-      const userId = req.param("id");
+      const userId = req.params.id;
       const matchingList = await Matching.findAll({
         include: [
-            {
-              model: Location,
-              required: true,
-            },
-          ],
+          {
+            model: Location,
+            required: true,
+          },
+        ],
         where: {
-          tour_guide_id: userId,
-        }
+          tourGuideId: userId,
+        },
       });
 
-      res.status(201).json(matchingList);
+      const formattedList = matchingList.map((matching) => formatMatchingInfo(matching));
+
+      res.status(StatusCodes.OK).json(formattedList);
     } catch (error) {
       console.error(error);
       return res
@@ -68,41 +68,38 @@ const MatchingController = {
         .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
     }
   },
+
   createMatching: async (req, res) => {
     try {
-      const { jap_user_id, tour_guide_id, location_id, matching_date } = req.body;
+      const { japUserId, tourGuideId, locationId, matchingDate } = req.body;
       const existMatching = await Matching.findOne({
         where: {
-          jap_user_id, tour_guide_id, matching_date
-        }
+          japUserId,
+          tourGuideId,
+          matchingDate,
+        },
       });
 
       if (existMatching)
-        return res.status(StatusCodes.BAD_REQUEST).json({ error: 'Can\'t match same person on same day' });
+        return res
+          .status(StatusCodes.BAD_REQUEST)
+          .json({ error: "Can't match the same person on the same day" });
 
       const matching = await Matching.create({
-        jap_user_id, tour_guide_id, matching_date,
-        status: "BOOKED"
-      })
-
-      const matchingLocation = await MatchingLocation.create({
-        location_id,
-        matching_id: matching.matching_id
-      })
-
-      const matchResult = await Matching.findOne({
-        include: [
-            {
-              model: Location,
-              required: true,
-            },
-          ],
-        where: {
-          matching_id: matching.matching_id
-        }
+        japUserId,
+        tourGuideId,
+        matchingDate,
+        status: "保留中",
       });
 
-      res.status(201).json(matchResult);
+      const matchingLocation = await MatchingLocation.create({
+        locationId,
+        matchingId: matching.matchingId,
+      });
+
+      // const matchResult = await getMatchingInfo(matching.matchingId);
+
+      // res.status(StatusCodes.CREATED).json(matchResult);
     } catch (error) {
       console.error(error);
       return res
@@ -110,6 +107,41 @@ const MatchingController = {
         .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
     }
   },
+  cancelMatching: async (req, res) => {
+    const matchingId = req.params.id;
+    try {
+      const matching = await Matching.findByPk(matchingId);
+
+      if (!matching) {
+        return res.status(404).json({ error: 'Matching not found' });
+      }
+      // Check if the matching is cancellable (you might have additional conditions)
+      if (matching.status !== '保留中') {
+        return res.status(400).json({ error: 'Matching cannot be canceled' });
+      }
+
+      // Update the status to "Cancel"
+      matching.status = 'キャンセル';
+      matching.save();
+
+      // Respond with the updated matching
+      res.json({ message: 'Matching canceled successfully', matching });
+    } catch (error) {
+      console.error('Error canceling matching:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  }
 };
+
+function formatMatchingInfo(matching) {
+  return {
+    key: matching.matching_id.toString(), // Update to 'matching_id'
+    name: `${matching.japUser.username} - ${matching.tourGuide.username}`,
+    date: matching.matching_date.toLocaleDateString("en-US"), // Update to 'matching_date'
+    createAt: matching.created_at.toLocaleDateString("en-US"), // Update to 'created_at'
+    status: matching.status,
+    location: matching.MatchingLocations.length > 0 ? matching.MatchingLocations[0].Location.name : "",
+  };
+}
 
 export default MatchingController;

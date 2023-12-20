@@ -6,5 +6,4 @@ export default function profile(app) {
   app.use("/api/profile", router);
 
   router.get("/", ProfileController.profileView);
-  router.post("/cancel-request", ProfileController.cancelRequest);
 }
