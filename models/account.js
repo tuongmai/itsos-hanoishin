@@ -14,6 +14,19 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Matching, {
         foreignKey: "tour_guide_id",
       });
+      this.hasMany(models.TourGuideLocation, {
+        foreignKey: "tour_guide_id"
+      });
+      this.belongsToMany(models.Account, {
+        through: models.Matching,
+        foreignKey: "jap_user_id",
+        as: "tourGuideUser"
+      })
+      this.belongsToMany(models.Account, {
+        through: models.Matching,
+        foreignKey: "tour_guide_id",
+        as: "japUser"
+      })
     }
   }
 

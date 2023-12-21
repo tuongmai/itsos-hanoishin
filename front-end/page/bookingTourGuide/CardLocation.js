@@ -1,32 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import useStyles from "./styles";
-import { Col, Row } from "antd";
+import { useState } from "react";
+import { Col, Row, Image } from "antd";
 
-const CardLocation = () => {
+const CardLocation = ({index, isClicked, location, setIndex}) => {
   const classes = useStyles();
+  const { name, description, image } = location;
+  const onClickLayout = () => {
+    setIndex(index);
+  }
   return (
     <>
-      <div className={classes.layoutCard}>
+      <div className={classes.layoutCard} style={isClicked ? {boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)"} : {}} onClick={onClickLayout}>
         <div>
-            <input type="checkbox" style={{position: "absolute", top: "3px", left: "2px", transform: "scale(2)"}}/>
-        </div>
-        <div>
-          <img
-            src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-viet-nam-14-819x1024.jpg?tr=dpr-2,w-675"
-            width={"200px"}
+          <Image
+            src={image}
+            width={200}
+            height={"100%"}
           />
         </div>
         <div style={{margin: "20px"}}>
-          <div className={classes.titleCard}>ホアンキエム湖</div>
-          <div>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus
-            error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-            architecto beatae vitae
+          <div className={classes.titleCard}>{name}</div>
+          <div style={{overflowWrap:"anywhere"}}>
+            {description}
           </div>
         </div>
       </div>

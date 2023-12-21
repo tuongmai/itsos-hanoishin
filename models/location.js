@@ -57,6 +57,7 @@ module.exports = (sequelize, DataTypes) => {
           fields: ["locationId", "name", "address"],
         },
       ],
+      timestamps: false
     }
   );
 
