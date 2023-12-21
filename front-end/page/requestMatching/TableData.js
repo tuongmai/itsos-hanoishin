@@ -83,7 +83,7 @@ const TableData = () => {
         try {
           setIsAction(false)
           await axios.put(
-            `${baseUrl}/api/matching/cancel-matching/${matchingId}`
+            `${baseUrl}/api/matching/agree-matching/${matchingId}`
           );
           Swal.fire({
             title: "予約が作成されました!",
