@@ -12,7 +12,7 @@ export default function routes(app) {
     });
   });
 
-  app.get("/tourGuide", (req, res) => {
+  app.get("/tourGuide/:touGuideId", (req, res) => {
     res.render("tourGuide.hbs", {
       title: "ツアーガイド",
     });

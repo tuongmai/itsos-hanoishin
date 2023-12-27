@@ -43,7 +43,10 @@ const Header = () => {
               className="brand"
               style={{ textDecoration: "none" }}
             >
-              ハノイシーン
+              <img
+              width={50}
+               src="https://scontent.xx.fbcdn.net/v/t1.15752-9/409496832_776054761023446_7206138461818381495_n.png?_nc_cat=110&ccb=1-7&_nc_sid=510075&_nc_ohc=HDUhzjWgkzQAX8sCqJf&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQmcvuzXXrbHxaHyYIQOrX57PIqtLScxD5wx7VirHH09w&oe=65B3615C"
+               />
             </a>
           </div>
           <div className="site-header__middle">
