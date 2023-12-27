@@ -1,6 +1,6 @@
 import { TourGuideSkill } from "../../models";
 import { Op } from "sequelize";
-import { Account, TourGuideLocation } from "../../models";
+import { Account, TourGuideLocation, Location } from "../../models";
 
 const TourGuideController = {
   tourGuideList: async (req, res) => {
@@ -27,6 +27,16 @@ const TourGuideController = {
           {
             model: TourGuideSkill,
             required: true,
+          },
+          {
+            model: TourGuideLocation,
+            required: true,
+            include: [
+              {
+                model: Location,
+                required: true,
+              },
+            ],
           },
         ],
         where: {
@@ -91,10 +101,10 @@ const TourGuideController = {
           },
           {
             model: TourGuideSkill,
-            require: true
-          }
-        ]
-      })
+            require: true,
+          },
+        ],
+      });
       res.status(201).json(tourGuideList);
     } catch (error) {
       console.error(error);

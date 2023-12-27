@@ -16,8 +16,8 @@
   padding-bottom: 1rem;
 }
 .site-header__start{
-    padding: 10px 45px;
-    background-color: white;
+    padding: 10px 0px 10px 30px;
+    /* background-color: white; */
     border-radius: 5px;
 }
 @media (min-width: 660px) {

@@ -21,6 +21,9 @@ const useStyles = createUseStyles({
     boxShadow: "0px 0px 2px 0px rgba(0,0,0,0.75)",
     webkitBoxShadow: "0px 0px 15px 0px rgba(0,0,0,0.75)",
     mozBoxShadow: "0px 0px 5px 0px rgba(0,0,0,0.75)",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
   },
   skillDescription: {
     border: "1px solid #000000",

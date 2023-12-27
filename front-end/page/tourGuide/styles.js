@@ -10,8 +10,8 @@ const useStyles = createUseStyles({
     margin: "auto",
     width: "fit-content",
     padding: "20px",
-    border: "1px solid #000000",
-    borderRadius: "5px",
+    // border: "1px solid #000000",
+    // borderRadius: "5px",
   },
   skillName: {
     background: "white",
